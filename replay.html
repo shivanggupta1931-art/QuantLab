@@ -1,0 +1,141 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuantLab |Market Replay</title>
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/theme.css">
+    <link rel="stylesheet" href="css/replay.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    
+</head>
+<body style="color: black;">
+
+    <main class="replay">
+        <header class="replay-header">
+            <div class="logo">
+                <h1>QuantLab</h1>
+                <span>Market Replay</span>
+            </div>
+
+            <div class="market-info">
+                <div class="market-item">
+                    <span class="label">Market</span>
+                    <strong>BTC/USD</strong>
+                </div>
+                <div class="market-item">
+                    <span class="label">Timeframe</span>
+                    <strong>1D</strong>
+                </div>
+                <div class="market-item">
+                    <span class="label">Replay</span>
+                    <strong>Day 1/365</strong>
+                </div>
+            </div>
+        </header>
+        
+
+        <section class="replay-layout">
+            <section class="chart-panel">
+                <div id="current-price-line"></div>
+                <div id="chart-container">
+              
+
+                </div>
+            </section>
+
+
+
+            <aside class="sidebar">
+                <div class="card">
+                    <h3>Current Position</h3>
+                    <div class="info-row">
+                        <span>Status</span>
+                        <strong id="positionStatus">None</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Entry Price</span>
+                        <strong id="entryPrice">--</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Current Price</span>
+                        <strong id="currentPrice">--</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>P/L</span>
+                        <strong id="profitLoss">0</strong>
+                    </div>
+                </div>
+
+
+                <div class="card">
+                    <h3>Session summary</h3>
+                    <div class="info-row">
+                        <span>Total Trades</span>
+                        <strong id="totalTrades">0</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Winning Trades</span>
+                        <strong id="winningTrades" >0</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Losing Trades</span>
+                        <strong id="losingTrades" >0</strong>
+                    </div>
+                     <div class="info-row">
+                        <span>Win Rate </span>
+                        <strong id="winRate">0%</strong>
+                    </div>
+                    <div class="info-row">
+                        <span>Next P/L </span>
+                        <strong id="netProfit">0.00</strong>
+                    </div>
+                </div>
+
+                
+
+                <div class="trade-panel">
+                        <button class="buy-btn">BUY</button>
+                        <button class="sell-btn">SELL</button>
+                        <button class="close-btn">CLOSE</button>
+                </div>
+
+            </aside>
+        </section>
+
+
+        <section class="replay-controls">
+            <button id="nextCandleBtn">NEXT BUTTON</button>
+           
+        </section> 
+         <div class="card">
+                <h3>Trade History</h3>
+                <div id="tradeHistory"></div>
+        </div>
+
+
+
+    </main>
+    <script src="libs/lightweight-charts.standalone.production.js"></script>
+   
+    <script src="js/replay/camera.js"></script>
+    <script src="js/replay/chart.js"></script>
+    <script src="js/replay/config.js"></script>
+    <script src="js/replay/dataLoader.js"></script>
+    <script src="js/replay/replayEngine.js"></script>
+    <script src="js/replay/summary.js"></script>
+    <script src="js/replay/markers.js"></script>
+    
+    <script src="js/replay/history.js"></script>
+    <script src="js/replay/tradeEngine.js"></script>
+   
+    <script src="js/replay/ui.js"></script>
+    
+     <script src="js/replay/app.js"></script>
+   
+
+    
+</body>
+</html>

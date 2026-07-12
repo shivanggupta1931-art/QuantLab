@@ -1,0 +1,91 @@
+:root{
+    --warning: #F59E0B;
+
+    /* ========= Brand ========= */
+
+    --primary-color:#2563EB;
+    --primary-hover:#1D4ED8;
+
+    --secondary-color:#06B6D4;
+    --secondary-hover:#0891B2;
+
+    --accent-color:#8B5CF6;
+
+    /* ========= Background ========= */
+
+    --bg-primary:#0B0F19;
+    --bg-secondary:#121826;
+    --bg-card:#1A2235;
+    --bg-card-hover:#222C44;
+
+    /* ========= Text ========= */
+
+    --text-primary:#F8FAFC;
+    --text-secondary:#CBD5E1;
+    --text-muted:#94A3B8;
+
+    /* ========= Status ========= */
+
+    --success:#22C55E;
+    --warning:#F59E0B;
+    --danger:#EF4444;
+    --info:#38BDF8;
+
+    /* ========= Border ========= */
+
+    --border-color:#2B3448;
+
+    /* ========= Shadows ========= */
+
+    --shadow-sm:0 2px 8px rgba(0,0,0,.15);
+    --shadow-md:0 8px 24px rgba(0,0,0,.25);
+    --shadow-lg:0 15px 45px rgba(0,0,0,.35);
+
+    /* ========= Radius ========= */
+
+    --radius-sm:8px;
+    --radius-md:14px;
+    --radius-lg:22px;
+    --radius-xl:30px;
+
+    /* ========= Spacing ========= */
+
+    --space-xs:8px;
+    --space-sm:16px;
+    --space-md:24px;
+    --space-lg:48px;
+    --space-xl:80px;
+    --space-2xl:120px;
+
+    /* ========= Typography ========= */
+
+    --font-primary:'Inter',sans-serif;
+
+    --fs-xs:12px;
+    --fs-sm:14px;
+    --fs-base:16px;
+    --fs-lg:20px;
+    --fs-xl:28px;
+    --fs-2xl:40px;
+    --fs-3xl:56px;
+    --fs-4xl:72px;
+
+    --fw-light:300;
+    --fw-normal:400;
+    --fw-medium:500;
+    --fw-semibold:600;
+    --fw-bold:700;
+    --fw-black:800;
+
+    /* ========= Layout ========= */
+
+    --container-width:1200px;
+    --section-padding:100px;
+
+    /* ========= Animation ========= */
+
+    --transition-fast:.2s ease;
+    --transition:.3s ease;
+    --transition-slow:.5s ease;
+
+}

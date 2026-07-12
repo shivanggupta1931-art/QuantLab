@@ -1,0 +1,243 @@
+.replay{
+    min-height: 100vh;
+    background: var(--bg-primary-color,#0b1220);
+    color: var(--text-primary-color,#fff);
+    padding: 32px;
+}
+
+.replay-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom:24px;
+
+}
+
+.logo{
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.logo span{
+    color: var(--text-secondary-color, #94a3b8);
+}
+
+.market-info{
+    display: flex;
+    gap: 16px;
+}
+
+.market-item{
+    background-color:var(--bg-secondary-color,#111827);
+    border: 1px solid var(--border-color,#1f2937);
+    border-radius: 12px;
+    padding: 12px 18px;
+}
+
+.market-item .label{
+    display: block;
+    font-size: .75rem;
+    color: var(--text-secondary-color,#94a3b8);
+    margin-bottom:6px;
+}
+.replay-layout{
+    display: grid;
+    grid-template-columns: 4fr 1.2fr;
+    gap: 24px;
+    margin-bottom: 24px;
+
+}
+
+.chart-panel{
+    background: var(--bg-secondary-color,#111827);
+    border: 1px solid var(--border-color,#1f2937);
+    border-radius: 18px;
+    overflow: hidden;
+    position: relative;
+}
+
+#chart-container{
+    height: 720px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+
+
+}
+/* #current-price-line{
+    position:absolute;
+    top:100px;
+    left:0;
+    width:100%;
+    height:2px;
+    background:red;
+    z-index:9999;
+    pointer-events:none;
+} */
+
+.chart-placeholder{
+    text-align: center;
+    color:var(--text-secondary-color,#94a3b8);
+}
+
+.sidebar{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.card h3{
+    margin-bottom: 18px;
+
+}
+
+.info-row{
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0px ;
+    border-bottom: 1px solid rgba(255,255,255,0.6);
+
+}
+
+.info-row span{
+     color:var(--text-secondary-color,#94a3b8);
+
+}
+
+.info-row:last-child{
+    border-bottom:none;
+}
+.trade-panel{
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+}
+.trade-panel button,
+#nextCandleBtn{
+    border:none;
+    border-radius:12px;
+    cursor:pointer;
+    font-weight:700;
+    transition:.25s;
+}
+.trade-panel button{
+    height: 56px;
+    color: #fff;
+}
+
+.buy-btn{background:#16a34a;}
+.sell-btn{background: #dc2626;}
+.close-btn{
+    background: #2563eb;
+}
+.trade-panel button:hover,
+#nextCandleBtn:hover{
+    transform: translateY(-2px);
+}
+
+#nextCandleBtn{
+    width:100%;
+    height:68px;
+    background:#f59e0b;
+    color:#111827;
+    font-size:1rem;
+}
+@media (max-width:1100px){
+    .replay-layout{
+        grid-template-columns:1fr;
+    }
+
+    #chart-container{
+        height:520px;
+    }
+}
+
+
+@media (max-width:768px){
+
+    .replay{
+        padding:20px;
+    }
+
+    .replay-header{
+        flex-direction:column;
+        align-items:flex-start;
+        gap:16px;
+    }
+
+    .market-info{
+        width:100%;
+        display:grid;
+        grid-template-columns:1fr;
+    }
+}
+
+.buy-btn:hover{
+    background:#15803d;
+}
+
+.sell-btn:hover{
+    background:#b91c1c;
+}
+
+.close-btn:hover{
+    background:#1d4ed8;
+}
+*{
+    box-sizing:border-box;
+}
+.chart-placeholder h2{
+
+    color:white;
+
+    margin-bottom:10px;
+
+}
+
+.history-section{
+
+    margin-top:40px;
+
+    padding:25px;
+
+    border-radius:16px;
+
+    background:#111827;
+
+}
+
+.empty-history{
+
+    text-align:center;
+
+    padding:60px;
+
+    color:#94a3b8;
+
+}
+
+.empty-history h3{
+
+    margin-bottom:12px;
+
+    color:white;
+
+}
+
+.trade-history-item{
+
+    padding:20px;
+
+    border-bottom:1px solid #374151;
+
+}
+
+.trade-history-item:last-child{
+
+    border-bottom:none;
+
+}

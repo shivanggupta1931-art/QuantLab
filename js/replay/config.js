@@ -1,0 +1,3 @@
+const START_CANDLES=50;
+const START_INDEX = 200;
+

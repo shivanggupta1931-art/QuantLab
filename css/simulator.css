@@ -1,0 +1,260 @@
+/* ===========================
+   START SIMULATOR SECTION
+=========================== */
+
+.start-simulator{
+
+    position: relative;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 20px;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at top,#1e3a8a 0%,#0f172a 45%,#020617 100%);
+}
+
+
+/* Animated 3D background */
+
+.start-simulator::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:650px;
+    height:650px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle,
+        rgba(37,99,235,.35),
+        transparent 70%);
+
+    filter:blur(40px);
+
+    animation:floatOne 12s ease-in-out infinite;
+
+}
+
+.start-simulator::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    right:-120px;
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(circle,
+        rgba(59,130,246,.25),
+        transparent 70%);
+
+    filter:blur(30px);
+
+    animation:floatTwo 10s ease-in-out infinite;
+
+}
+
+
+/* ===========================
+   CARD
+=========================== */
+
+.simulation-card{
+
+    position:relative;
+
+    z-index:2;
+
+    width:min(850px,90%);
+
+    padding:70px;
+
+    text-align:center;
+
+    border-radius:28px;
+
+    background:rgba(17,24,39,.65);
+
+    backdrop-filter:blur(16px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,.45);
+
+}
+
+
+/* ===========================
+   TAG
+=========================== */
+
+.simulation-tag{
+
+    display:inline-block;
+
+    padding:10px 22px;
+
+    border-radius:999px;
+
+    background:#2563eb;
+
+    color:white;
+
+    font-size:.9rem;
+
+    letter-spacing:1px;
+
+    margin-bottom:30px;
+
+}
+
+
+/* ===========================
+   TEXT
+=========================== */
+
+.simulation-card h2{
+
+    font-size:3.5rem;
+
+    color:white;
+
+    margin-bottom:25px;
+
+}
+
+.simulation-card p{
+
+    max-width:650px;
+
+    margin:auto;
+
+    line-height:1.8;
+
+    font-size:1.1rem;
+
+    color:#cbd5e1;
+
+}
+
+
+/* ===========================
+   BUTTON
+=========================== */
+
+.simulation-card a{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    gap:12px;
+
+    margin-top:45px;
+
+    padding:18px 40px;
+
+    border-radius:50px;
+
+    text-decoration:none;
+
+    color:white;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    transition:.35s;
+
+    box-shadow:
+        0 10px 30px rgba(37,99,235,.45);
+
+}
+
+.simulation-card a:hover{
+
+    transform:
+        translateY(-5px)
+        scale(1.04);
+
+    box-shadow:
+        0 20px 40px rgba(37,99,235,.55);
+
+}
+
+.simulation-card a span{
+
+    transition:.35s;
+
+}
+
+.simulation-card a:hover span{
+
+    transform:translateX(8px);
+
+}
+
+
+/* ===========================
+   ANIMATION
+=========================== */
+
+@keyframes floatOne{
+
+    0%,100%{
+
+        transform:
+            translate(-120px,-80px)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate(60px,40px)
+            scale(1.2);
+
+    }
+
+}
+
+@keyframes floatTwo{
+
+    0%,100%{
+
+        transform:
+            translate(0,0)
+            scale(1);
+
+    }
+
+    50%{
+
+        transform:
+            translate(-80px,-60px)
+            scale(.85);
+
+    }
+
+}
