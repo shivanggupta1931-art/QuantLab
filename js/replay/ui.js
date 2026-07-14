@@ -1,11 +1,21 @@
 
 function updatePositionCard(){
 
-    document.getElementById("positionStatus").textContent=trade.inPosition?trade.side:"NONE";
-    
-    document.getElementById("entryPrice").textContent=trade.inPosition?trade.entryPrice.toFixed(2):"--";
+    document.getElementById("positionSizeValue").textContent=
+    trade.inPosition?
+    trade.positionSize:"--"
 
-    document.getElementById("currentPrice").textContent=trade.inPosition?trade.currentPrice.toFixed(2):"--";
+    document.getElementById("positionStatus").textContent=
+    trade.inPosition?
+    trade.side:"NONE";
+    
+    document.getElementById("entryPrice").textContent=
+    trade.inPosition?
+    trade.entryPrice.toFixed(2):"--";
+
+    document.getElementById("currentPrice").textContent=
+    trade.inPosition?
+    trade.currentPrice.toFixed(2):"--";
 
     const pnl=document.getElementById("profitLoss")
 

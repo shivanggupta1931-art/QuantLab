@@ -76,39 +76,3 @@ const dailyChallenges = [
 
 ];
 
-// let currentChallenge = null;
-// let answered = false;
-
-// function loadChallenge(){
-
-//     // document.getElementById("challengeCategory").textContent=challenge.category;
-//     currentChallenge=dailyChallenges[Math.floor(Math.random()*dailyChallenges.length)];
-//     document.getElementById("challengeCategory").textContent=currentChallenge.category;
-//     document.getElementById("challengeTitle").textContent =currentChallenge.title;
-
-//     optionButtons.forEach((button,index)=>{
-//         button.textContent=String.fromCharCode(65+index)+" "+currentChallenge.options[index];
-//     });
-
-// }
-// loadChallenge();
-// const challengeCategory = document.getElementById("challengeCategory");
-
-// if (challengeCategory) {
-
-//     const challenge =
-//         dailyChallenges[
-//             Math.floor(Math.random() * dailyChallenges.length)
-//         ];
-
-//     document.getElementById("challengeCategory").textContent = challenge.category;
-//     document.getElementById("challengeTitle").textContent = challenge.title;
-//     document.getElementById("challengeTime").textContent = challenge.time;
-//     document.getElementById("challengeQuestions").textContent = challenge.questions;
-//     document.getElementById("challengeReward").textContent = challenge.reward;
-//     document.getElementById("challengeQuestion").textContent = challenge.question;
-
-//     // ...rest of the Daily Challenge JS...
-
-// }
-

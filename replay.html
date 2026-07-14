@@ -64,6 +64,10 @@
                         <strong id="currentPrice">--</strong>
                     </div>
                     <div class="info-row">
+                        <span>Size</span>
+                        <strong id="positionSizeValue">--</strong>
+                    </div>
+                    <div class="info-row">
                         <span>P/L</span>
                         <strong id="profitLoss">0</strong>
                     </div>
@@ -94,6 +98,19 @@
                     </div>
                 </div>
 
+
+                <div class="position-size">
+                    <label for="positionSize">
+                        Position Size
+                    </label>
+                    <input type="number"
+                           id="positionSize"
+                           value="1"
+                           min="1"
+                           required>
+                           
+                </div>
+
                 
 
                 <div class="trade-panel">
@@ -101,6 +118,7 @@
                         <button class="sell-btn">SELL</button>
                         <button class="close-btn">CLOSE</button>
                 </div>
+
 
             </aside>
         </section>

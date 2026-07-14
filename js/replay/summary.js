@@ -52,6 +52,8 @@ tradePnL
 }
 
 function updateSummaryCard(){
+
+    // document.getElementById("sizePositionValue").textContent=
     document.getElementById("totalTrades").textContent=session.totalTrades;
 
     document.getElementById("winningTrades").textContent=session.winningTrades;

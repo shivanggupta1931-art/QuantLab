@@ -1,7 +1,10 @@
 const tradeHistory=[]
 function addTradeToHistory(tradeData){
-    tradeHistory.push(tradeData)
+
+    tradeHistory.push(tradeData);
+
     renderTradeHistory();
+
 }
 
 function renderTradeHistory() {
@@ -24,6 +27,7 @@ function renderTradeHistory() {
 
         return;
     }
+    // <p><strong>Size:</strong> ${trade.size}</p>
 
     container.innerHTML = "";
 
@@ -48,6 +52,8 @@ function renderTradeHistory() {
             <p><strong>Entry Time:</strong> ${trade.entryTime}</p>
 
             <p><strong>Exit Time:</strong> ${trade.exitTime}</p>
+
+            <p><strong>Size:</strong> ${trade.size}</p>
 
             <p style="color:${trade.pnl >= 0 ? "#22c55e" : "#ef4444"}">
 
