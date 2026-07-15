@@ -55,7 +55,10 @@ function renderTradeHistory() {
 
             <p><strong>Size:</strong> ${trade.size}</p>
 
+            <p><strong>Exit:</strong> ${trade.closeReason}</p>
+
             <p style="color:${trade.pnl >= 0 ? "#22c55e" : "#ef4444"}">
+
 
                 <strong>P/L:</strong>
 

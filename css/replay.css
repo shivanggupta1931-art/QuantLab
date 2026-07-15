@@ -260,3 +260,12 @@
     color: white;
     font-size: 1rem;
 }
+
+#stopLoss{
+    padding: 12px;
+    border-radius: 10px;
+    border: 1px solid  #374151;
+    background:#111827;
+    color: white;
+    font-size: 1rem;
+}

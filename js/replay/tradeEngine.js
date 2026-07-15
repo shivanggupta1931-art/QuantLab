@@ -1,3 +1,4 @@
+
 const trade = {
     inPosition: false,
     side: null,
@@ -5,145 +6,156 @@ const trade = {
     currentPrice: 0,
     profitLoss: 0,
     totalTrades: 0,
-    positionSize:0,
-    entryIndex:0,
-    entryTime:null
+    positionSize: 0,
+    entryIndex: 0,
+    entryTime: null,
+    stopLoss: null,
+    takeProfit: null,
+    closeReason: null,
 };
 
-function buy() {
+function resetTrade() {
+    trade.inPosition = false;
+    trade.side = null;
+    trade.entryPrice = 0;
+    trade.currentPrice = 0;
+    trade.profitLoss = 0;
+    trade.positionSize = 0;
+    trade.entryIndex = 0;
+    trade.entryTime = null;
+    trade.stopLoss = null;
+    trade.takeProfit = null;
+    trade.closeReason = null;
+}
 
-   
+function setupTrade() {
+    trade.positionSize = Number(document.getElementById("positionSize").value);
+
+    trade.stopLoss = document.getElementById("stopLoss").value
+        ? Number(document.getElementById("stopLoss").value)
+        : null;
+
+    const tpInput = document.getElementById("takeProfit");
+    trade.takeProfit = tpInput && tpInput.value
+        ? Number(tpInput.value)
+        : null;
+}
+
+function buy() {
     if (trade.inPosition) return;
 
     const last = replay.visibleData[replay.visibleData.length - 1];
 
-
-
-
     trade.inPosition = true;
-   trade.positionSize = Math.max(
-    1,
-    Number(document.getElementById("positionSize").value)
-);
+    setupTrade();
+
     trade.side = "LONG";
     trade.entryPrice = last.close;
     trade.currentPrice = last.close;
-    trade.profitLoss = (trade.currentPrice-trade.entryPrice)*trade.positionSize;
-
-
+    trade.profitLoss = 0;
     trade.entryIndex = replay.currentIndex;
-    trade.entryTime = last.time; 
+    trade.entryTime = last.time;
 
-
-
-
-
-
-    console.log("BUY @", trade.entryPrice);
     updatePositionCard();
 }
 
+function sell() {
+    if (trade.inPosition) return;
 
+    const last = replay.visibleData[replay.visibleData.length - 1];
 
-function sell(){
-    if(trade.inPosition)
-        return;
-    
-    const last=replay.visibleData[
-        replay.visibleData.length-1
-    ];
+    trade.inPosition = true;
+    setupTrade();
 
-    trade.inPosition=true;
+    trade.side = "SHORT";
+    trade.entryPrice = last.close;
+    trade.currentPrice = last.close;
+    trade.profitLoss = 0;
+    trade.entryIndex = replay.currentIndex;
+    trade.entryTime = last.time;
 
-    trade.positionSize=Number(document.getElementById("positionSize").value);
-
-    trade.side="SHORT";
-    trade.entryPrice=last.close;
-    trade.profitLoss=0;
-    trade.currentPrice=last.close;
-    trade.entryTime=last.time;
-
-    trade.entryIndex=replay.currentIndex; 
-    console.log("SELL @", trade.entryPrice);
     updatePositionCard();
 }
 
 function updateTrade() {
-
-
     if (!trade.inPosition) return;
 
     const last = replay.visibleData[replay.visibleData.length - 1];
-
     trade.currentPrice = last.close;
-    // trade.profitLoss = Number((trade.currentPrice - trade.entryPrice)*trade.positionSize).toFixed(2);
 
-    if(trade.side=="LONG"){
-        trade.profitLoss=Number((trade.currentPrice-trade.entryPrice)*trade.positionSize).toFixed(2)
+    if (trade.side === "LONG") {
+        trade.profitLoss = (trade.currentPrice - trade.entryPrice) * trade.positionSize;
+    } else {
+        trade.profitLoss = (trade.entryPrice - trade.currentPrice) * trade.positionSize;
     }
-    else{
-        trade.profitLoss=Number((trade.entryPrice-trade.currentPrice)*trade.positionSize).toFixed(2);
+
+    if (trade.side === "LONG" &&
+        trade.stopLoss !== null &&
+        trade.currentPrice <= trade.stopLoss) {
+        trade.closeReason = "Stop Loss";
+        closeTrade();
+        return;
     }
-    
+
+    if (trade.side === "SHORT" &&
+        trade.stopLoss !== null &&
+        trade.currentPrice >= trade.stopLoss) {
+        trade.closeReason = "Stop Loss";
+        closeTrade();
+        return;
+    }
+
+
+
+    // TAKE PROFIT
+    if(trade.side=="LONG" &&
+        trade.takeProfit!==null &&
+        trade.currentPrice>=trade.takeProfit
+    ){
+        trade.closeReason="Take Profit"
+        closeTrade();
+        return;
+    }
+
+    if(
+        trade.side=="SHORT" &&
+        trade.takeProfit!==null&&
+        trade.currentPrice<=trade.takeProfit
+    ){
+        trade.closeReason="Take Profit"
+        closeTrade();
+        return;
+    }
+
     updatePositionCard();
 }
 
 function closeTrade() {
     if (!trade.inPosition) return;
 
-    console.log("Trade Closed", trade.profitLoss);
     updateSession(trade.profitLoss);
 
-        const last = replay.visibleData[
-        replay.visibleData.length - 1
-    ];
+    const last = replay.visibleData[replay.visibleData.length - 1];
+    const duration = replay.currentIndex - trade.entryIndex;
 
+    addTradeToHistory({
+        side: trade.side,
+        entry: trade.entryPrice,
+        exit: trade.currentPrice,
+        pnl: trade.profitLoss,
+        size: trade.positionSize,
+        duration,
+        entryTime: trade.entryTime,
+        exitTime: last.time,
+        closeReason: trade.closeReason || "Manual"
+    });
 
-
-
-    const duration =
-    replay.currentIndex -
-    trade.entryIndex;
-
-
-    const percentage =
-
-        (
-        trade.profitLoss /
-        trade.entryPrice
-        )
-
-        *100;
-
-
-   
-
-
-                    addTradeToHistory({
-
-                side: trade.side,
-
-                entry: trade.entryPrice,
-
-                exit: trade.currentPrice,
-
-                pnl: trade.profitLoss,
-
-                size: trade.positionSize,
-
-                duration,
-
-                entryTime: trade.entryTime,
-
-                exitTime: last.time
-
-            });
-
-
-    trade.inPosition = false;
-    trade.side = null;
     trade.totalTrades++;
+    resetTrade();
     updatePositionCard();
 }
 
 console.log("tradeEngine loaded completely");
+
+
+

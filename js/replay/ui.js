@@ -17,6 +17,12 @@ function updatePositionCard(){
     trade.inPosition?
     trade.currentPrice.toFixed(2):"--";
 
+
+    document.getElementById("stopLoss").textContent=
+    trade.inPosition
+        ?Number(trade.stopLoss).toFixed(2)
+        :"--";
+
     const pnl=document.getElementById("profitLoss")
 
     if(trade.inPosition){

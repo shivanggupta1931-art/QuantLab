@@ -88,6 +88,10 @@
                         <span>Losing Trades</span>
                         <strong id="losingTrades" >0</strong>
                     </div>
+                    <div class="info-row">
+                        <span>Stop Loss</span>
+                        <strong id="stopLossValue">--</strong>
+                    </div>
                      <div class="info-row">
                         <span>Win Rate </span>
                         <strong id="winRate">0%</strong>
@@ -114,6 +118,21 @@
                 
 
                 <div class="trade-panel">
+                        <div class="position-size">
+                            <label for="">Stop Loss</label>
+                            <input type="number"
+                                   id="stopLoss"
+                                  step="100"
+                                   >
+                        </div>
+
+                        <div class="position-size">
+                            <label for="">Take Profit</label>
+                            <input type="number"
+                                   id="takeProfit"
+                                   step="100"
+                                   >
+                        </div>
                         <button class="buy-btn">BUY</button>
                         <button class="sell-btn">SELL</button>
                         <button class="close-btn">CLOSE</button>
