@@ -1,3 +1,16 @@
+const analytics = {
+
+    totalTrades:0,
+
+    winningTrades:0,
+
+    losingTrades:0,
+
+    totalPnL:0
+
+};
+
+
 
 const trade = {
     inPosition: false,
@@ -28,6 +41,31 @@ function resetTrade() {
     trade.closeReason = null;
 }
 
+
+
+function updateAnalytics(){
+    document.getElementById("totalPnL").textContent=analytics.totalPnL;
+    document.getElementById("totalTrades").textContent=analytics.totalTrades;
+    document.getElementById("winningTrades").textContent=analytics.winningTrades;
+    document.getElementById("losingTrades").textContent=analytics.losingTrades;
+
+    const winRate=analytics.totalTrades==0
+    ?0
+    :(analytics.winningTrades/analytics.totalTrades)*100;
+
+    document.getElementById("winRate").textContent=
+    winRate.toFixed(1)+"%";
+    document.getElementById("totalPnL").textContent=
+    "$"+analytics.totalPnL.toFixed(2);
+
+    const avg=analytics.totalTrades===0
+    ?0
+    :analytics.totalPnL/analytics.totalTrades;
+
+    document.getElementById("averagePnL").textContent=
+
+    "$"+avg.toFixed(2);
+}
 function setupTrade() {
     trade.positionSize = Number(document.getElementById("positionSize").value);
 

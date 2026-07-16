@@ -1,0 +1,45 @@
+.analytics-panel{
+    margin-top: 25px;
+    background: #1c1c1c;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid rgba(255,255,255,.08);
+}
+
+.analytics-panel h3{
+    margin-bottom: 18px;
+    color: white;
+}
+
+.analytics-grid{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 16px;
+}
+.stat-card{
+    background:#252525;
+    padding-right: 16px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+
+
+.stat-card span{
+
+    color:#888;
+
+    font-size:14px;
+
+}
+
+
+.stat-card h2{
+
+    color:white;
+
+    margin-top:10px;
+
+    font-size:28px;
+
+}

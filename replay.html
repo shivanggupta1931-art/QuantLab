@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/theme.css">
     <link rel="stylesheet" href="css/replay.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/analytics.css">
     
 </head>
 <body style="color: black;">
@@ -147,6 +148,50 @@
             <button id="nextCandleBtn">NEXT BUTTON</button>
            
         </section> 
+
+
+        <!-- ANALYTICS -->
+
+        <div class="analytics-panel">
+            <h3>Trading Analytics</h3>
+            <div class="analytics-grid">
+                <div class="stat-card">
+                    <span>Total Trades</span>
+                    <h2 id="totalTrades">0</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Winning Trades</span>
+                    <h2 id="winningTrades">0</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Losing Trades</span>
+                    <h2 id="losingTrades">0</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Win Rate</span>
+                    <h2 id="winRate">0%</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Total P/L</span>
+                    <h2 id="totalPnL">$0</h2>
+                </div>
+                <div class="stat-card">
+                    <span>Average P/L</span>
+                    <h2 id="averagePnL">$0</h2>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
          <div class="card">
                 <h3>Trade History</h3>
                 <div id="tradeHistory"></div>
