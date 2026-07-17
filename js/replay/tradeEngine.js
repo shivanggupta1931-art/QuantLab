@@ -59,6 +59,19 @@ function buy() {
     trade.entryIndex = replay.currentIndex;
     trade.entryTime = last.time;
 
+
+
+
+
+
+console.log("BUY");
+console.log("Current Index:", replay.currentIndex);
+console.log("Entry Price:", trade.entryPrice);
+console.log("Visible Candle:", replay.visibleData[replay.visibleData.length - 1]);
+
+
+
+
     updatePositionCard();
 }
 
@@ -156,6 +169,7 @@ function closeTrade() {
     
 
     trade.totalTrades++;
+
 
     resetTrade();
 

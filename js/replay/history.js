@@ -24,7 +24,7 @@ function renderTradeHistory(){
 
         row.innerHTML=`
 
-            <td>${index+1}</td>
+            <td>${tradeHistory.length - index}</td>
 
             <td>${trade.side}</td>
 

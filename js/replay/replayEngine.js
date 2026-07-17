@@ -57,7 +57,6 @@ function startReplay(data) {
     moveCamera();
 }
 function nextCandle() {
-    console.log("NEXT button pressed");
 
     if (replay.currentIndex >= replay.allData.length)
         return;
