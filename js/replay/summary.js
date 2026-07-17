@@ -1,74 +1,80 @@
-const session={
 
-    totalTrades:0,
-    winningTrades:0,
-    losingTrades:0,
-    netProfit:0,
-    winRate:0,
-    bestTrade: -Infinity,
 
-worstTrade: Infinity,
+const session = {
+    totalTrades: 0,
+    winningTrades: 0,
+    losingTrades: 0,
 
-}
+    netProfit: 0,
+    winRate: 0,
+
+    bestTrade: Number.NEGATIVE_INFINITY,
+    worstTrade: Number.POSITIVE_INFINITY,
+
+    averageWin: 0,
+    averageLoss: 0,
+
+    grossProfit: 0,
+    grossLoss: 0,
+
+    profitFactor: 0,
+
+    largestDrawdown: 0,
+
+    expectancy: 0
+};
+
+
 
 function updateSession(tradePnL){
-    session.totalTrades++;
-    session.netProfit+=tradePnL;
 
-    if(tradePnL>0){
+    // console.log("Before:", JSON.stringify(session));
+
+    session.totalTrades++;
+    session.netProfit += tradePnL;
+
+    if (tradePnL > 0) {
         session.winningTrades++;
-    }
-    else if(tradePnL<0){
+    } else if (tradePnL < 0) {
         session.losingTrades++;
     }
 
-    if(session.totalTrades===0){
-        session.winRate=0
+    session.winRate =
+        session.totalTrades === 0
+        ? 0
+        : (session.winningTrades / session.totalTrades) * 100;
 
-    }
-    else{
-        session.winRate=(session.winningTrades/session.totalTrades)*100;
-        
-    }
+    // console.log("After:", JSON.stringify(session));
 
-    session.bestTrade =
-Math.max(
-session.bestTrade,
-tradePnL
-);
-
-session.worstTrade =
-Math.min(
-session.worstTrade,
-tradePnL
-);
-    // session.winRate=session.totalTrade===0
-    //     ?0
-    //     :(session.winningTrade/session.totalTrade)*100;
-
-        updateSummaryCard();
-
-
+    updateSummaryCard();
+    addEquityPoint(session.netProfit);
 }
 
 function updateSummaryCard(){
 
-    // document.getElementById("sizePositionValue").textContent=
-    document.getElementById("totalTrades").textContent=session.totalTrades;
+document.getElementById("totalTrades").textContent = session.totalTrades;
+document.getElementById("analyticsTotalTrades").textContent = session.totalTrades;
 
-    document.getElementById("winningTrades").textContent=session.winningTrades;
+document.getElementById("winningTrades").textContent = session.winningTrades;
+document.getElementById("analyticsWinningTrades").textContent = session.winningTrades;
 
-    document.getElementById("losingTrades").textContent =session.losingTrades;
+document.getElementById("losingTrades").textContent = session.losingTrades;
+document.getElementById("analyticsLosingTrades").textContent = session.losingTrades;
 
+document.getElementById("winRate").textContent =
+    session.winRate.toFixed(1) + "%";
 
-    document.getElementById("winRate").textContent =session.winRate.toFixed(1) + "%";
+document.getElementById("analyticsWinRate").textContent =
+    session.winRate.toFixed(1) + "%";
+    document.getElementById("netProfit").textContent =
+    session.netProfit.toFixed(2);
 
-    const pnl=document.getElementById("netProfit");
+document.getElementById("analyticsTotalPnL").textContent =
+    "$"+session.netProfit.toFixed(2);
 
-    pnl.textContent=Number(session.netProfit).toFixed(2);
-
-    pnl.style.color=session.netProfit>=0
-        ?"#22c55e"
-        :"#ef4444";
+    document.getElementById("analyticsAveragePnL").textContent =
+    session.totalTrades === 0
+        ? "0.00"
+        :"$"+(session.netProfit / session.totalTrades).toFixed(2);
 }
 

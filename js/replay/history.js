@@ -1,74 +1,57 @@
 const tradeHistory=[]
-function addTradeToHistory(tradeData){
+function addTradeToHistory(trade){
 
-    tradeHistory.push(tradeData);
+    tradeHistory.unshift(trade);
 
     renderTradeHistory();
 
 }
 
-function renderTradeHistory() {
+function renderTradeHistory(){
 
-    const container = document.getElementById("tradeHistory");
+    const body = document.getElementById("tradeHistoryBody");
 
-    if (tradeHistory.length === 0) {
+    body.innerHTML="";
 
-        container.innerHTML = `
-            <div class="empty-history">
+    tradeHistory.forEach((trade,index)=>{
 
-                <h3>No trades yet</h3>
+        const row=document.createElement("tr");
 
-                <p>
-                    Complete your first trade to build your journal.
-                </p>
+        const pnlClass=
+        trade.pnl>=0
+        ?"profit"
+        :"loss";
 
-            </div>
-        `;
+        row.innerHTML=`
 
-        return;
-    }
-    // <p><strong>Size:</strong> ${trade.size}</p>
+            <td>${index+1}</td>
 
-    container.innerHTML = "";
+            <td>${trade.side}</td>
 
-    tradeHistory.forEach((trade, index) => {
+            <td>${trade.entry.toFixed(2)}</td>
 
-        const card = document.createElement("div");
+            <td>${trade.exit.toFixed(2)}</td>
 
-        card.className = "trade-history-item";
+            <td class="${pnlClass}">
+                ${trade.pnl.toFixed(2)}
+            </td>
 
-        card.innerHTML = `
+            <td>${trade.closeReason}</td>
 
-            <h3>Trade #${index + 1}</h3>
-
-            <p><strong>Side:</strong> ${trade.side}</p>
-
-            <p><strong>Entry:</strong> ${trade.entry.toFixed(2)}</p>
-
-            <p><strong>Exit:</strong> ${trade.exit.toFixed(2)}</p>
-
-            <p><strong>Duration:</strong> ${trade.duration} candles</p>
-
-            <p><strong>Entry Time:</strong> ${trade.entryTime}</p>
-
-            <p><strong>Exit Time:</strong> ${trade.exitTime}</p>
-
-            <p><strong>Size:</strong> ${trade.size}</p>
-
-            <p><strong>Exit:</strong> ${trade.closeReason}</p>
-
-            <p style="color:${trade.pnl >= 0 ? "#22c55e" : "#ef4444"}">
-
-
-                <strong>P/L:</strong>
-
-                ${Number(trade.pnl).toFixed(2)}
-
-            </p>
+            <td>${trade.duration}</td>
 
         `;
 
-        container.appendChild(card);
+        body.appendChild(row);
+
+    });
+        document
+    .getElementById("clearHistoryBtn")
+    .addEventListener("click",()=>{
+
+        tradeHistory.length=0;
+
+        renderTradeHistory();
 
     });
 

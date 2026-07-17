@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/replay.css">
     <link rel="stylesheet" href="css/responsive.css">
     <link rel="stylesheet" href="css/analytics.css">
+    <link rel="stylesheet" href="css/equity.css">
     
 </head>
 <body style="color: black;">
@@ -157,27 +158,27 @@
             <div class="analytics-grid">
                 <div class="stat-card">
                     <span>Total Trades</span>
-                    <h2 id="totalTrades">0</h2>
+                    <h2 id="analyticsTotalTrades">0</h2>
                 </div>
                 <div class="stat-card">
                     <span>Winning Trades</span>
-                    <h2 id="winningTrades">0</h2>
+                    <h2 id="analyticsWinningTrades">0</h2>
                 </div>
                 <div class="stat-card">
                     <span>Losing Trades</span>
-                    <h2 id="losingTrades">0</h2>
+                    <h2 id="analyticsLosingTrades">0</h2>
                 </div>
                 <div class="stat-card">
                     <span>Win Rate</span>
-                    <h2 id="winRate">0%</h2>
+                    <h2 id="analyticsWinRate">0%</h2>
                 </div>
                 <div class="stat-card">
                     <span>Total P/L</span>
-                    <h2 id="totalPnL">$0</h2>
+                    <h2 id="analyticsTotalPnL">$0</h2>
                 </div>
                 <div class="stat-card">
                     <span>Average P/L</span>
-                    <h2 id="averagePnL">$0</h2>
+                    <h2 id="analyticsAveragePnL">$0</h2>
                 </div>
 
             </div>
@@ -185,17 +186,60 @@
 
 
 
+        <!-- EQUITY CURVE -->
 
-
-
-
-
-
-
-         <div class="card">
-                <h3>Trade History</h3>
-                <div id="tradeHistory"></div>
+        <div class="equity-panel">
+            <h3>Equity Curve</h3>
+            <div id="equityChart"></div>
         </div>
+
+
+
+
+
+        <!-- ================= Trade History ================= -->
+
+    <div class="history-panel">
+
+        <div class="history-header">
+            <h3>Trade History</h3>
+            <button id="clearHistoryBtn">Clear</button>
+        </div>
+
+        <div class="history-table-wrapper">
+
+            <table class="history-table">
+
+                <thead>
+
+                    <tr>
+                        <th>#</th>
+                        <th>Side</th>
+                        <th>Entry</th>
+                        <th>Exit</th>
+                        <th>P/L</th>
+                        <th>Reason</th>
+                        <th>Duration</th>
+                    </tr>
+
+                </thead>
+
+                <tbody id="tradeHistoryBody">
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
 
 
 
@@ -207,6 +251,7 @@
     <script src="js/replay/config.js"></script>
     <script src="js/replay/dataLoader.js"></script>
     <script src="js/replay/replayEngine.js"></script>
+     <script src="js/replay/equity.js"></script>
     <script src="js/replay/summary.js"></script>
     <script src="js/replay/markers.js"></script>
     
@@ -214,6 +259,7 @@
     <script src="js/replay/tradeEngine.js"></script>
    
     <script src="js/replay/ui.js"></script>
+    <!-- <script src="js/replay/equity.js"></script> -->
     
      <script src="js/replay/app.js"></script>
    

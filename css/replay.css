@@ -269,3 +269,112 @@
     color: white;
     font-size: 1rem;
 }
+
+
+.history-panel{
+
+    margin-top:25px;
+
+    background:#1d1d1d;
+
+    border-radius:14px;
+
+    padding:20px;
+
+    border:1px solid rgba(255,255,255,.08);
+
+}
+
+.history-header{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:15px;
+
+}
+
+.history-header h3{
+
+    color:white;
+
+}
+
+#clearHistoryBtn{
+
+    padding:8px 16px;
+
+    border:none;
+
+    border-radius:8px;
+
+    background:#ff5252;
+
+    color:white;
+
+    cursor:pointer;
+
+}
+
+.history-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+}
+
+.history-table th{
+
+    color:#888;
+
+    padding:14px;
+
+    border-bottom:1px solid rgba(255,255,255,.08);
+
+    text-align:center;
+
+}
+
+.history-table td{
+
+    color:white;
+
+    padding:12px;
+
+    border-bottom:1px solid rgba(255,255,255,.05);
+
+    text-align:center;
+
+}
+
+.history-table tr:hover{
+
+    background:#2a2a2a;
+
+}
+
+.history-table-wrapper{
+
+    overflow-x:auto;
+
+}
+
+.profit{
+
+    color:#19c37d !important;
+
+    font-weight:600;
+
+}
+
+.loss{
+
+    color:#ff5b5b !important;
+
+    font-weight:600;
+
+}
