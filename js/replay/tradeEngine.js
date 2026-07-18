@@ -151,6 +151,8 @@ function closeTrade() {
 
     updateSession(trade.profitLoss);
 
+    account.balance+=trade.profitLoss;
+
     const last = replay.visibleData[replay.visibleData.length - 1];
     const duration = replay.currentIndex - trade.entryIndex;
 

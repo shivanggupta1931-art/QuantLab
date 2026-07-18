@@ -23,23 +23,26 @@ const session = {
 
     largestWin: Number.NEGATIVE_INFINITY,
     largestLoss: Number.POSITIVE_INFINITY,
- 
+    
 
-// RATIOS
-    winRate: 0,
-    profitFactor: 0,
-    expectancy: 0,
+    // RATIOS
+        winRate: 0,
+        profitFactor: 0,
+        expectancy: 0,
 
 
-// RISK
-   equityPeak:0,
-   largestDrawdown:0
+    // RISK
+    equityPeak:0,
+    largestDrawdown:0
 
 };
 
 
 
 function updateSession(tradePnL){
+
+
+
 
     // console.log("Before:", JSON.stringify(session));
 
@@ -105,29 +108,98 @@ session.largestDrawdown = Math.max(
 
 function updateSummaryCard(){
 
+    // SESSION SUMMARY
+
 document.getElementById("totalTrades").textContent = session.totalTrades;
-document.getElementById("analyticsTotalTrades").textContent = session.totalTrades;
+
 
 document.getElementById("winningTrades").textContent = session.winningTrades;
-document.getElementById("analyticsWinningTrades").textContent = session.winningTrades;
+
 
 document.getElementById("losingTrades").textContent = session.losingTrades;
-document.getElementById("analyticsLosingTrades").textContent = session.losingTrades;
+
 
 document.getElementById("winRate").textContent =
     session.winRate.toFixed(1) + "%";
 
+document.getElementById("netProfit").textContent =
+    session.netProfit.toFixed(2);
+
+
+    // AnaLytics Panel
+document.getElementById("analyticsTotalTrades").textContent = session.totalTrades;
+document.getElementById("analyticsWinningTrades").textContent = session.winningTrades;
+document.getElementById("analyticsLosingTrades").textContent = session.losingTrades;
+
 document.getElementById("analyticsWinRate").textContent =
     session.winRate.toFixed(1) + "%";
-    document.getElementById("netProfit").textContent =
-    session.netProfit.toFixed(2);
+
 
 document.getElementById("analyticsTotalPnL").textContent =
     "$"+session.netProfit.toFixed(2);
 
-    document.getElementById("analyticsAveragePnL").textContent =
+document.getElementById("analyticsAveragePnL").textContent =
     session.totalTrades === 0
         ? "0.00"
         :"$"+(session.netProfit / session.totalTrades).toFixed(2);
+
+
+// PROFITABILITY
+
+
+document.getElementById("grossProfit").textContent="$"+session.grossProfit.toFixed(2);
+
+document.getElementById("grossLoss").textContent="$"+session.grossLoss.toFixed(2);
+
+
+document.getElementById("profitFactor").textContent =
+    session.grossLoss === 0
+        ? "--"
+        : session.profitFactor.toFixed(2);
+
+document.getElementById("expectancy").textContent =
+    session.totalTrades === 0
+        ? "--"
+        : "$" + session.expectancy.toFixed(2);
+
+
+   /* ================= TRADE PERFORMANCE ================= */
+
+
+document.getElementById("averageWin").textContent=session.winningTrades===0
+?"--"
+:"$"+session.averageWin.toFixed(2);
+
+document.getElementById("averageLoss").textContent=session.losingTrades===0
+?"--"
+:"$"+session.averageLoss.toFixed(2);
+
+
+document.getElementById("largestWin").textContent = session.winningTrades === 0
+? "--"
+: "$" + session.largestWin.toFixed(2);
+
+
+
+
+document.getElementById("largestLoss").textContent =
+    session.losingTrades === 0
+        ? "--"
+        : "$" + session.largestLoss.toFixed(2);
+
+
+
+
+        // RISK
+
+document.getElementById("largestDrawdown").textContent =
+    "$"+ session.largestDrawdown.toFixed(2);
+
+
+
+document.getElementById("accountBalance").textContent=
+"$"+account.balance.toFixed(2);
+
+
 }
 
