@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "category": "Probability",
+    "difficulty": "Easy",
+    "question": "A fair coin is flipped 3 times. What is the probability of getting exactly 2 heads?",
+    "options": [
+      "1/8",
+      "3/8",
+      "1/2",
+      "5/8"
+    ],
+    "correctAnswer": 1,
+    "hint": "Count how many outcomes have exactly two heads.",
+    "explanation": "There are 8 possible outcomes. Exactly two heads occur in HHT, HTH, and THH, so the probability is 3/8."
+  },
+  {
+    "id": 2,
+    "category": "Probability",
+    "difficulty": "Easy",
+    "question": "A bag contains 5 red, 3 blue, and 2 green balls. One ball is selected randomly. What is the probability of selecting a blue ball?",
+    "options": [
+      "2/5",
+      "3/10",
+      "1/2",
+      "1/5"
+    ],
+    "correctAnswer": 1,
+    "hint": "Probability = Favorable Outcomes / Total Outcomes.",
+    "explanation": "There are 10 balls in total and 3 are blue. Probability = 3/10."
+  },
+  {
+    "id": 3,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "All quants understand probability. Some programmers are quants. Which statement must be true?",
+    "options": [
+      "Every programmer understands probability.",
+      "Some programmers understand probability.",
+      "No programmer understands probability.",
+      "Every quant is a programmer."
+    ],
+    "correctAnswer": 1,
+    "hint": "Use logical deduction.",
+    "explanation": "Since some programmers are quants and all quants understand probability, some programmers must understand probability."
+  },
+  {
+    "id": 4,
+    "category": "Mental Math",
+    "difficulty": "Easy",
+    "question": "A stock rises 20% and then falls 20%. Compared to the starting price, it is now:",
+    "options": [
+      "4% lower",
+      "Unchanged",
+      "4% higher",
+      "8% lower"
+    ],
+    "correctAnswer": 0,
+    "hint": "Assume the stock starts at 100.",
+    "explanation": "100 → 120 → 96. Final value is 4% lower than the starting value."
+  },
+  {
+    "id": 5,
+    "category": "Risk Management",
+    "difficulty": "Easy",
+    "question": "Your account balance is $10,000. You risk 2% per trade. What is the maximum amount you should lose on this trade?",
+    "options": [
+      "$100",
+      "$150",
+      "$200",
+      "$500"
+    ],
+    "correctAnswer": 2,
+    "hint": "Calculate 2% of the account balance.",
+    "explanation": "2% of $10,000 is $200."
+  },
+  {
+    "id": 6,
+    "category": "Trading",
+    "difficulty": "Easy",
+    "question": "You buy Bitcoin at $100. Your stop loss is $95 and your take profit is $110. What is the Risk : Reward ratio?",
+    "options": [
+      "1 : 1",
+      "1 : 2",
+      "2 : 1",
+      "5 : 10"
+    ],
+    "correctAnswer": 1,
+    "hint": "Risk = Entry - Stop Loss. Reward = Take Profit - Entry.",
+    "explanation": "Risk = $5, Reward = $10. Ratio = 1 : 2."
+  },
+  {
+    "id": 7,
+    "category": "Statistics",
+    "difficulty": "Easy",
+    "question": "Find the mean of 4, 6, 8, 10, and 12.",
+    "options": [
+      "7",
+      "8",
+      "9",
+      "10"
+    ],
+    "correctAnswer": 1,
+    "hint": "Add all numbers and divide by the count.",
+    "explanation": "The sum is 40. Divide by 5 to get 8."
+  },
+  {
+    "id": 8,
+    "category": "Pattern Recognition",
+    "difficulty": "Easy",
+    "question": "Find the next number: 2, 6, 12, 20, 30, ?",
+    "options": [
+      "36",
+      "40",
+      "42",
+      "44"
+    ],
+    "correctAnswer": 2,
+    "hint": "Look at the differences between consecutive numbers.",
+    "explanation": "Differences are 4, 6, 8, 10. The next difference is 12, so the answer is 42."
+  },
+  {
+    "id": 9,
+    "category": "Expected Value",
+    "difficulty": "Medium",
+    "question": "A game pays ₹100 with probability 0.4 and ₹0 with probability 0.6. What is the expected value?",
+    "options": [
+      "₹20",
+      "₹40",
+      "₹60",
+      "₹100"
+    ],
+    "correctAnswer": 1,
+    "hint": "Expected Value = Sum of (Probability × Outcome).",
+    "explanation": "0.4 × 100 + 0.6 × 0 = ₹40."
+  },
+  {
+    "id": 10,
+    "category": "Market Reasoning",
+    "difficulty": "Medium",
+    "question": "A stock has fallen 15% in two days after reporting excellent earnings. There is no new negative news. What is the best action?",
+    "options": [
+      "Buy immediately",
+      "Sell immediately",
+      "Wait for more confirmation",
+      "Short the stock"
+    ],
+    "correctAnswer": 2,
+    "hint": "Avoid making decisions from a single data point.",
+    "explanation": "Strong traders seek additional confirmation instead of reacting immediately to short-term price movements."
+  }
+]
