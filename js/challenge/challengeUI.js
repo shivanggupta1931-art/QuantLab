@@ -114,22 +114,31 @@ function setupSubmitButton() {
     });
 
 }
+function setupHintButton() {
 
-function setupHintButton(){
-    const hintBtn=document.getElementById("hintBtn");
-    const hintText=document.getElementById("hintText");
+    console.log("setupHintButton initialized");
 
-    hintBtn.addEventListener("click",()=>{
-        const question =getCurrentQuestion();
+    // const hintBtn = document.getElementById("hintBtn");
+    const hintBtn = document.getElementById("hintBtn");
+    const hintText = document.getElementById("hintText");
 
-        if(!question) return;
+    hintBtn.addEventListener("click", () => {
 
-        if(hintText.textContent===" "){
-            hintText.textContent=question.hint;
-            hintBtn.textContent="Hide Hint"
-        }else{
-            hintText.textContent="";
-            hintBtn.textContent="Show Hint";
+        console.log("Hint button clicked");
+
+        const question = getCurrentQuestion();
+
+        console.log(question);
+        console.log(question.hint);
+
+        if (hintText.textContent === "") {
+            hintText.textContent = question.hint;
+            hintBtn.textContent = "Hide Hint";
+        } else {
+            hintText.textContent = "";
+            hintBtn.textContent = "Show Hint";
         }
-    })
+
+    });
+
 }

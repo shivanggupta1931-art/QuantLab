@@ -1,13 +1,28 @@
-/* CHALLENGE PAGE */
-.challenge-container{
-    max-width:900px;
-    margin:120px auto 60px;
-    padding:0 20px;
+body{
+    background:
+        radial-gradient(circle at top left, rgba(37,99,235,.15), transparent 35%),
+        radial-gradient(circle at bottom right, rgba(6,182,212,.12), transparent 40%),
+        var(--bg-primary);
 }
 
+/* CHALLENGE PAGE */
+.challenge-container{
+    max-width:1100px;
+    margin:110px auto 80px;
+    padding:0 30px;
+    position: relative;
+}
+.challenge-container::before{
+    content:"";
+    position:absolute;
+    inset:-80px;
+    background:radial-gradient(circle, rgba(37,99,235,.08), transparent 70%);
+    z-index:-1;
+}
 /* TOP BADGES */
 
 .challenge-top{
+    margin-bottom:35px;
     display:flex;
     justify-content:center;
     gap:12px;
@@ -27,11 +42,17 @@
 /* QUESTION CARD */
 
 .challenge-card{
-    background:var(--bg-card);
-    border:1px solid var(--border-color);
-    border-radius:18px;
-    padding:40px;
-    box-shadow:var(--shadow-md);
+    background:linear-gradient(
+        180deg,
+        rgba(255,255,255,.03),
+        rgba(255,255,255,.015)
+    );
+    border:1px solid rgba(255,255,255,.08);
+    padding:55px;
+    border-radius:24px;
+    box-shadow:
+        0 15px 45px rgba(0,0,0,.35),
+        0 0 35px rgba(37,99,235,.08);
 }
 
 .question-number{
@@ -42,10 +63,10 @@
 }
 
 #questionText{
-    color:var(--text-primary);
-    font-size:1.6rem;
-    line-height:1.6;
-    margin-bottom:35px;
+    font-size:2rem;
+    line-height:1.5;
+    font-weight:700;
+    margin-bottom:40px;
 }
 
 /* OPTIONS */
@@ -57,33 +78,36 @@
 }
 
 .option-btn{
-    width:100%;
-    text-align:left;
-    padding:18px 20px;
-    border-radius:12px;
-    border:1px solid var(--border-color);
-    background:transparent;
-    color:var(--text-primary);
-    cursor:pointer;
-    transition:.25s;
-    font-size:1rem;
+    padding:22px 24px;
+    font-size:1.08rem;
+    border-radius:14px;
 }
 
 .option-btn:hover{
+    transform:translateX(8px);
     border-color:var(--primary-color);
-    background:rgba(37,99,235,.08);
-    transform:translateX(5px);
+    background:rgba(37,99,235,.12);
+    box-shadow:0 0 18px rgba(37,99,235,.18);
 }
 
 .option-btn.selected{
     background:rgba(37,99,235,.18);
-    border-color:var(--primary-color);
+    border:1px solid var(--primary-color);
+    box-shadow:0 0 18px rgba(37,99,235,.25);
 }
 
 /* HINT */
 
-.hint-card,
+.hint-card{
+    .hint-card{
+    border-left:4px solid var(--warning);
+}
+}
 .result-card{
+    min-height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     margin-top:24px;
     background:var(--bg-card);
     border:1px solid var(--border-color);
@@ -116,13 +140,12 @@
 }
 
 .correct{
-    color:var(--success);
+    color:#22C55E;
 }
 
 .wrong{
-    color:var(--danger);
+    color:#EF4444;
 }
-
 #explanationText{
     color:var(--text-secondary);
     line-height:1.8;
@@ -139,34 +162,35 @@
 
 .challenge-actions button{
     flex:1;
-    padding:16px;
+    padding:20px;
     border:none;
-    border-radius:12px;
-    font-size:1rem;
+    border-radius:14px;
+    font-size:1.05rem;
     font-weight:600;
     cursor:pointer;
     transition:.25s;
 }
 
 #submitBtn{
-    background:var(--primary-color);
-    color:white;
+    background:linear-gradient(
+        135deg,
+        #2563EB,
+        #3B82F6
+    );
+    box-shadow:0 10px 25px rgba(37,99,235,.35);
 }
 
 #submitBtn:hover{
-    background:var(--primary-hover);
-    transform:translateY(-2px);
+    transform:translateY(-3px);
 }
 
 #nextBtn{
-    background:transparent;
-    border:1px solid var(--primary-color);
-    color:var(--primary-color);
+    border:1px solid rgba(37,99,235,.35);
+    background:rgba(37,99,235,.06);
 }
 
 #nextBtn:hover{
-    background:var(--primary-color);
-    color:white;
+    background:#2563EB;
 }
 
 /* RESPONSIVE */
@@ -185,4 +209,20 @@
         flex-direction:column;
     }
 
+}
+
+.challenge-header{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.challenge-header h1{
+    font-size:2.8rem;
+    color:var(--text-primary);
+    margin-bottom:10px;
+}
+
+.challenge-header p{
+    color:var(--text-secondary);
+    font-size:1.05rem;
 }

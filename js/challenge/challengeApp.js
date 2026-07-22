@@ -7,7 +7,6 @@ document.addEventListener("DOMContentLoaded", async () => {
     renderQuestion(question);
 
     setupOptionButtons();
-
     setupSubmitButton();
     setupHintButton();
     setupNextButton();
