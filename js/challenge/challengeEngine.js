@@ -1,23 +1,30 @@
 let currentQuestion=null;
-let currentQuestionIndex=-1;
+// let currentQuestionIndex=-1;
+let sessionQuestions = [];
+let currentQuestionIndex = 0;
+const DAILY_LIMIT = 10;
 
 let selectedAnswer=null;
-
+let hasSubmitted = false;
 /**
  * Returns a random question
  */
-function getRandomQuestions(){
-    const questions=getQuestions();
-    if(questions.length==0){
-        console.error("No questions available");
-        return null;
-    }
+function startDailyChallenge(){
 
-    currentQuestionIndex=Math.floor(Math.random()*questions.length);
-    currentQuestion=questions[currentQuestionIndex];
+    const questions=[...getQuestions()];
+
+    // Shuffle
+    questions.sort(()=>Math.random()-0.5);
+
+    // Pick only 10
+    sessionQuestions=questions.slice(0,DAILY_LIMIT);
+
+    currentQuestionIndex=0;
+
+    currentQuestion=sessionQuestions[currentQuestionIndex];
+
     return currentQuestion;
 }
-
 /**
  * Returns the current question
  */
@@ -59,4 +66,35 @@ function getSelectedAnswer(){
  */
 function resetSelectedAnswer(){
     selectedAnswer=null;
+}
+
+
+function nextQuestion(){
+
+    if(currentQuestionIndex>=DAILY_LIMIT-1){
+
+        completeDailyChallenge();
+
+        return null;
+    }
+
+    currentQuestionIndex++;
+
+    currentQuestion=sessionQuestions[currentQuestionIndex];
+
+    return currentQuestion;
+
+}
+
+
+function completeDailyChallenge(){
+
+    progress.streak++;
+
+    localStorage.setItem("streak",progress.streak);
+
+    updateProgressUI();
+
+    alert("🎉 Daily Challenge Completed!");
+
 }

@@ -30,6 +30,10 @@ function renderQuestion(question){
     document.getElementById("explanationText").textContent="";
     document.getElementById("hintText").textContent = "";
     resetSelectedAnswer();
+    hasSubmitted = false;
+
+    document.getElementById("submitBtn").disabled = false;
+    document.getElementById("nextBtn").disabled = true;
 
 
 
@@ -39,6 +43,9 @@ function setupOptionButtons(){
     const optionButtons=document.querySelectorAll(".option-btn");
     optionButtons.forEach((button,index)=>{
         button.addEventListener("click",()=>{
+            if(hasSubmitted){
+                return;
+            }
 
 
 
@@ -77,40 +84,48 @@ function setupNextButton() {
 
     nextBtn.addEventListener("click", () => {
 
-        const question = getRandomQuestions();
+       const question=nextQuestion();
 
-        renderQuestion(question);
+       if(question){
+
+    renderQuestion(question);
+
+}
 
     });
 
 }
 
 
-function setupSubmitButton() {
+function setupSubmitButton(){
 
     const submitBtn = document.getElementById("submitBtn");
 
-    submitBtn.addEventListener("click", () => {
+    submitBtn.addEventListener("click",()=>{
 
-       
-        const selectedAnswer = getSelectedAnswer();
-       
+        if(hasSubmitted){
+            return;
+        }
 
-        const question = getCurrentQuestion();
-        
+        const selectedAnswer=getSelectedAnswer();
 
-        if (selectedAnswer === null) {
-            
+        if(selectedAnswer===null){
             alert("Please select an option");
             return;
         }
 
-        const isCorrect = checkAnswer(selectedAnswer);
-        console.log("Is Correct:", isCorrect);
+        const isCorrect=checkAnswer(selectedAnswer);
 
         showResult(isCorrect);
 
-        
+        updateProgress(isCorrect);
+
+        hasSubmitted=true;
+
+        submitBtn.disabled=true;
+
+        document.getElementById("nextBtn").disabled=false;
+
     });
 
 }

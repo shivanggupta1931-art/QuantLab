@@ -226,3 +226,33 @@ body{
     color:var(--text-secondary);
     font-size:1.05rem;
 }
+
+.daily-progress-card{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.progress-item{
+    background:var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 20px;
+    text-align: center;
+}
+
+.progress-item span{
+    color: var(--text-secondary);
+
+}
+.progress-item h2{
+    margin-top: 10px;
+    color: var(--primary-color);
+    font-size: 1.8rem;
+}
+
+button:disabled{
+    opacity:.5;
+    cursor:not-allowed;
+}

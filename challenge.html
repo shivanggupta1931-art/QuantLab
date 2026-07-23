@@ -10,21 +10,24 @@
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/challenge.css">
+    <link rel="stylesheet" href="css/header.css">
 </head>
 <body>
    
     
     <!-- HEADER -->
     <header class="header">
+
         <div class="logo">
-            <span>QuantLab</span>
+            📈 <span>QuantLab</span>
         </div>
 
-        <nav>
+        <nav class="nav-links">
             <a href="index.html">Home</a>
+            <a href="challenge.html" class="active">Challenge</a>
             <a href="replay.html">Replay</a>
         </nav>
-    
+
     </header>
         
     <main class="challenge-container">
@@ -32,9 +35,43 @@
 
 
         <div class="challenge-header">
-    <h1>Daily Quant Challenge</h1>
-    <p>Sharpen your probability, logic and market reasoning.</p>
-</div>
+            <h1>Daily Quant Challenge</h1>
+            <p>Sharpen your probability, logic and market reasoning.</p>
+        </div>
+
+
+        <!-- Daily progress tracking -->
+        <div class="daily-progress-card">
+
+            <div class="progress-item">
+                <span>Streak 🔥</span>
+                <h2 id="dailyStreak">0</h2>
+            </div>
+            <div class="progress-item">
+                <span>🎯 Progress</span>
+                <h2 id="dailyProgress">0/10</h2>
+            </div>
+            <div class="progress-item">
+                <span>✅ Accuracy</span>
+                <h2 id="dailyAccuracy">0%</h2>
+            </div>
+
+            <div class="progress-item">
+                <span>⭐ XP</span>
+                <h2 id="dailyXP">0</h2>
+            </div>
+
+
+
+            
+        </div>
+
+
+
+
+
+
+
 
 
 
@@ -101,6 +138,10 @@
     </main>
 <script src="js/challenge/challengeLoader.js"></script>
 <script src="js/challenge/challengeEngine.js"></script>
+
+
+<script src="js/challenge/progress.js"></script>
+
 <script src="js/challenge/challengeUI.js"></script>
 <script src="js/challenge/challengeApp.js"></script>
     
