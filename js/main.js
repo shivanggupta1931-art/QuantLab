@@ -110,7 +110,9 @@ const skillButtons=document.querySelectorAll(".skill-item");
 
 function updateSkill(skill){
 
-    const data=skillsData[skill];
+    // const data=skillsData[skill];
+    // const data = getSkill(skill);
+    const data = getSkill(skill);
 
     moduleIcon.textContent=data.icon;
 
@@ -124,9 +126,11 @@ function updateSkill(skill){
 
     progressFill.style.width=data.progress+"%";
 
-    moduleProblems.textContent=data.problems;
+    // moduleProblems.textContent=data.problems;
+    moduleProblems.textContent = data.totalQuestions;
 
-    moduleHours.textContent=data.hours;
+    // moduleHours.textContent=data.hours;
+    moduleHours.textContent = data.duration;
 
     moduleDifficulty.textContent=data.difficulty;
 

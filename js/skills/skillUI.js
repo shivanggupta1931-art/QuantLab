@@ -1,4 +1,4 @@
-let currentSkill=getSkill("probability");
+let currentSkill=getSkills("probability");
 
 /**
  * Render the large skill card
@@ -26,7 +26,7 @@ function setupSkillCards(){
 
             const id = card.dataset.skill;
 
-            const skill = getSkill(id);
+            const skill = getSkills(id);
 
             renderSkill(skill);
 
