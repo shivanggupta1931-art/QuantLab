@@ -8,6 +8,18 @@ let score=0;
 
 
 
+let progress = JSON.parse(localStorage.getItem("skillProgress")) || {
+    probability: 0,
+    logic: 0,
+    mentalmath: 0,
+    finance: 0
+};
+
+let skill = null;
+let skillQuestions = [];
+let currentQuestionIndex = 0;
+let score = 0;
+
 
 
 
@@ -93,7 +105,7 @@ function showResults() {
 
     document.getElementById("backBtn").onclick = () => {
 
-        window.location.href = "training.html";
+        window.location.href = "index.html";
 
     };
 
@@ -170,6 +182,14 @@ function nextQuestion() {
         return;
     }
 
+
+    skill.progress = Math.round(
+    (currentQuestionIndex / skillQuestions.length) * 100
+    );
+
+    trainingProgressValue.textContent = skill.progress + "%";
+    trainingProgressFill.style.width = skill.progress + "%";
+
     renderQuestion();
 
 }
@@ -181,7 +201,7 @@ function nextQuestion() {
 // 
 
 const params = new URLSearchParams(window.location.search);
-const skillId = params.get("skill") || "probability";
+const skillId = (params.get("skill") || "probability").toLowerCase();
 
 const skill = getSkill(skillId);
 
@@ -325,12 +345,15 @@ async function loadQuestions() {
     const response = await fetch("data/questions.json");
 
     const questions = await response.json();
-
     skillQuestions = questions.filter(question =>
-        question.category.toLowerCase().replace(/\s+/g, "") === skillId.toLowerCase()
+        question.category
+            .toLowerCase()
+            .replace(/\s+/g, "") === skillId
     );
-
     console.log(skillQuestions);
+    if (skillQuestions.length === 0) {
+    alert("No questions found for this skill.");
+}
 
 }
 async function init() {

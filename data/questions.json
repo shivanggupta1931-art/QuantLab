@@ -911,7 +911,7 @@
   "explanation": "25% of £80 is £20. £80 − £20 = £60."
 },
 {
-  "id": 61,
+  "id": 71,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 25% of 80?",
@@ -926,7 +926,7 @@
   "explanation": "25% of 80 = 80 ÷ 4 = 20."
 },
 {
-  "id": 62,
+  "id": 72,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 18 × 5?",
@@ -941,7 +941,7 @@
   "explanation": "18 × 10 = 180. Half of 180 is 90."
 },
 {
-  "id": 63,
+  "id": 73,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 15% of 200?",
@@ -956,7 +956,7 @@
   "explanation": "10% of 200 is 20 and 5% is 10. Total = 30."
 },
 {
-  "id": 64,
+  "id": 74,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 99 + 101?",
@@ -971,7 +971,7 @@
   "explanation": "99 + 101 = 200."
 },
 {
-  "id": 65,
+  "id": 75,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 48 ÷ 6?",
@@ -986,7 +986,7 @@
   "explanation": "6 × 8 = 48."
 },
 {
-  "id": 66,
+  "id": 76,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 19 + 27?",
@@ -1001,7 +1001,7 @@
   "explanation": "20 + 27 = 47. Subtract 1 = 46."
 },
 {
-  "id": 67,
+  "id": 77,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 12²?",
@@ -1016,7 +1016,7 @@
   "explanation": "12 × 12 = 144."
 },
 {
-  "id": 68,
+  "id": 78,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 75% of 40?",
@@ -1031,7 +1031,7 @@
   "explanation": "Three-fourths of 40 = 30."
 },
 {
-  "id": 69,
+  "id": 79,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "What is 125 × 8?",
@@ -1046,7 +1046,7 @@
   "explanation": "125 × 8 = 1000."
 },
 {
-  "id": 70,
+  "id": 80,
   "category": "Mental Math",
   "difficulty": "Easy",
   "question": "A shirt costs £80 and is discounted by 25%. What is the sale price?",
