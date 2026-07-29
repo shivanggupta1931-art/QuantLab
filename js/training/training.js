@@ -8,19 +8,6 @@ let score=0;
 
 
 
-let progress = JSON.parse(localStorage.getItem("skillProgress")) || {
-    probability: 0,
-    logic: 0,
-    mentalmath: 0,
-    finance: 0
-};
-
-let skill = null;
-let skillQuestions = [];
-let currentQuestionIndex = 0;
-let score = 0;
-
-
 
 
 
