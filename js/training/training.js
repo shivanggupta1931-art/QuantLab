@@ -4,7 +4,7 @@
 
 let selectedAnswer = null;
 
-let score=0;
+// let score=0;
 
 
 
@@ -18,7 +18,7 @@ let score=0;
 
 
 
-// checking correct pr not
+
 
 function showResults() {
 
