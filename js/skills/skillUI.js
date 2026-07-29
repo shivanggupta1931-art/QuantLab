@@ -100,23 +100,14 @@ function setupSkillCards() {
 
 }
 
-// =============================
-// Start Training Button
-// =============================
 
 const startTrainingBtn = document.getElementById("startTrainingBtn");
 
-if (startTrainingBtn) {
+console.log(startTrainingBtn);
 
-    startTrainingBtn.addEventListener("click", () => {
-
-        if (!currentSkill) return;
-
-        window.location.href = `training.html?skill=${currentSkill.id}`;
-
-    });
-
-}
+startTrainingBtn.addEventListener("click", () => {
+    console.log("Button clicked!");
+});
 
 // =============================
 // Initialize

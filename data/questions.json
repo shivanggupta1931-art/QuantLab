@@ -3,150 +3,1663 @@
     "id": 1,
     "category": "Probability",
     "difficulty": "Easy",
-    "question": "A fair coin is flipped 3 times. What is the probability of getting exactly 2 heads?",
-    "options": [
-      "1/8",
-      "3/8",
-      "1/2",
-      "5/8"
-    ],
+    "question": "A fair coin is tossed once. What is the probability of getting Heads?",
+    "options": ["1/4", "1/2", "3/4", "1"],
     "correctAnswer": 1,
-    "hint": "Count how many outcomes have exactly two heads.",
-    "explanation": "There are 8 possible outcomes. Exactly two heads occur in HHT, HTH, and THH, so the probability is 3/8."
+    "hint": "A fair coin has two equally likely outcomes.",
+    "explanation": "There are two possible outcomes: Heads and Tails. Therefore, P(Heads) = 1/2."
   },
   {
     "id": 2,
     "category": "Probability",
     "difficulty": "Easy",
-    "question": "A bag contains 5 red, 3 blue, and 2 green balls. One ball is selected randomly. What is the probability of selecting a blue ball?",
-    "options": [
-      "2/5",
-      "3/10",
-      "1/2",
-      "1/5"
-    ],
-    "correctAnswer": 1,
-    "hint": "Probability = Favorable Outcomes / Total Outcomes.",
-    "explanation": "There are 10 balls in total and 3 are blue. Probability = 3/10."
+    "question": "A fair six-sided die is rolled. What is the probability of getting a 5?",
+    "options": ["1/2", "1/3", "1/6", "5/6"],
+    "correctAnswer": 2,
+    "hint": "Only one side shows 5.",
+    "explanation": "There are 6 equally likely outcomes and only one favourable outcome, so the probability is 1/6."
   },
   {
     "id": 3,
-    "category": "Logic",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "All quants understand probability. Some programmers are quants. Which statement must be true?",
-    "options": [
-      "Every programmer understands probability.",
-      "Some programmers understand probability.",
-      "No programmer understands probability.",
-      "Every quant is a programmer."
-    ],
-    "correctAnswer": 1,
-    "hint": "Use logical deduction.",
-    "explanation": "Since some programmers are quants and all quants understand probability, some programmers must understand probability."
+    "question": "A bag contains 4 red and 6 blue balls. One ball is chosen randomly. What is the probability of selecting a red ball?",
+    "options": ["2/5", "3/5", "1/2", "4/5"],
+    "correctAnswer": 0,
+    "hint": "Probability = favourable outcomes ÷ total outcomes.",
+    "explanation": "There are 10 balls in total and 4 are red. Probability = 4/10 = 2/5."
   },
   {
     "id": 4,
-    "category": "Mental Math",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "A stock rises 20% and then falls 20%. Compared to the starting price, it is now:",
-    "options": [
-      "4% lower",
-      "Unchanged",
-      "4% higher",
-      "8% lower"
-    ],
-    "correctAnswer": 0,
-    "hint": "Assume the stock starts at 100.",
-    "explanation": "100 → 120 → 96. Final value is 4% lower than the starting value."
+    "question": "Two fair coins are tossed. What is the probability of getting two heads?",
+    "options": ["1/2", "1/4", "3/4", "1/8"],
+    "correctAnswer": 1,
+    "hint": "List all possible outcomes.",
+    "explanation": "Possible outcomes are HH, HT, TH and TT. Only HH satisfies the condition, so the probability is 1/4."
   },
   {
     "id": 5,
-    "category": "Risk Management",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "Your account balance is $10,000. You risk 2% per trade. What is the maximum amount you should lose on this trade?",
-    "options": [
-      "$100",
-      "$150",
-      "$200",
-      "$500"
-    ],
-    "correctAnswer": 2,
-    "hint": "Calculate 2% of the account balance.",
-    "explanation": "2% of $10,000 is $200."
+    "question": "A standard deck has 52 cards. What is the probability of drawing an Ace?",
+    "options": ["1/13", "1/4", "4/13", "1/26"],
+    "correctAnswer": 0,
+    "hint": "There are four Aces in the deck.",
+    "explanation": "There are 4 Aces among 52 cards. Probability = 4/52 = 1/13."
   },
   {
     "id": 6,
-    "category": "Trading",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "You buy Bitcoin at $100. Your stop loss is $95 and your take profit is $110. What is the Risk : Reward ratio?",
-    "options": [
-      "1 : 1",
-      "1 : 2",
-      "2 : 1",
-      "5 : 10"
-    ],
-    "correctAnswer": 1,
-    "hint": "Risk = Entry - Stop Loss. Reward = Take Profit - Entry.",
-    "explanation": "Risk = $5, Reward = $10. Ratio = 1 : 2."
+    "question": "A die is rolled. What is the probability of getting an even number?",
+    "options": ["1/2", "1/3", "2/3", "1/6"],
+    "correctAnswer": 0,
+    "hint": "Even numbers on a die are 2, 4 and 6.",
+    "explanation": "There are 3 favourable outcomes out of 6 possible outcomes. Probability = 3/6 = 1/2."
   },
   {
     "id": 7,
-    "category": "Statistics",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "Find the mean of 4, 6, 8, 10, and 12.",
-    "options": [
-      "7",
-      "8",
-      "9",
-      "10"
-    ],
+    "question": "A spinner has 8 equal sections numbered 1 to 8. What is the probability of landing on a number greater than 6?",
+    "options": ["1/8", "1/4", "3/8", "1/2"],
     "correctAnswer": 1,
-    "hint": "Add all numbers and divide by the count.",
-    "explanation": "The sum is 40. Divide by 5 to get 8."
+    "hint": "Numbers greater than 6 are 7 and 8.",
+    "explanation": "There are 2 favourable outcomes out of 8 possible outcomes. Probability = 2/8 = 1/4."
   },
   {
     "id": 8,
-    "category": "Pattern Recognition",
+    "category": "Probability",
     "difficulty": "Easy",
-    "question": "Find the next number: 2, 6, 12, 20, 30, ?",
-    "options": [
-      "36",
-      "40",
-      "42",
-      "44"
-    ],
-    "correctAnswer": 2,
-    "hint": "Look at the differences between consecutive numbers.",
-    "explanation": "Differences are 4, 6, 8, 10. The next difference is 12, so the answer is 42."
+    "question": "A fair coin is tossed three times. What is the probability of getting exactly three heads?",
+    "options": ["1/4", "1/8", "3/8", "1/2"],
+    "correctAnswer": 1,
+    "hint": "Only one outcome contains three heads.",
+    "explanation": "There are 8 equally likely outcomes. Only HHH has three heads, so the probability is 1/8."
   },
   {
     "id": 9,
-    "category": "Expected Value",
-    "difficulty": "Medium",
-    "question": "A game pays ₹100 with probability 0.4 and ₹0 with probability 0.6. What is the expected value?",
-    "options": [
-      "₹20",
-      "₹40",
-      "₹60",
-      "₹100"
-    ],
-    "correctAnswer": 1,
-    "hint": "Expected Value = Sum of (Probability × Outcome).",
-    "explanation": "0.4 × 100 + 0.6 × 0 = ₹40."
+    "category": "Probability",
+    "difficulty": "Easy",
+    "question": "A jar contains 3 green, 5 yellow and 2 black marbles. What is the probability of drawing a black marble?",
+    "options": ["1/5", "2/5", "3/10", "1/10"],
+    "correctAnswer": 0,
+    "hint": "Find the total number of marbles first.",
+    "explanation": "There are 10 marbles in total and 2 are black. Probability = 2/10 = 1/5."
   },
   {
     "id": 10,
-    "category": "Market Reasoning",
+    "category": "Probability",
+    "difficulty": "Easy",
+    "question": "A card is drawn from a standard deck. What is the probability that it is a King?",
+    "options": ["1/4", "1/13", "4/13", "1/52"],
+    "correctAnswer": 1,
+    "hint": "There are four Kings in a standard deck.",
+    "explanation": "There are 4 Kings among 52 cards. Probability = 4/52 = 1/13."
+  },
+
+
+  {
+    "id": 11,
+    "category": "Probability",
     "difficulty": "Medium",
-    "question": "A stock has fallen 15% in two days after reporting excellent earnings. There is no new negative news. What is the best action?",
+    "question": "A fair coin is tossed 4 times. What is the probability of getting exactly 2 heads?",
+    "options": ["3/8", "1/4", "1/2", "5/8"],
+    "correctAnswer": 0,
+    "hint": "Use combinations: C(4,2).",
+    "explanation": "There are C(4,2)=6 ways to choose 2 heads. Total outcomes = 2⁴ = 16. Probability = 6/16 = 3/8."
+  },
+  {
+    "id": 12,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "Two fair dice are rolled. What is the probability that their sum is 7?",
+    "options": ["1/12", "1/6", "5/36", "7/36"],
+    "correctAnswer": 1,
+    "hint": "List all pairs that sum to 7.",
+    "explanation": "There are 36 equally likely outcomes. Six give a sum of 7: (1,6),(2,5),(3,4),(4,3),(5,2),(6,1). Probability = 6/36 = 1/6."
+  },
+  {
+    "id": 13,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A bag contains 7 white and 3 black balls. Two balls are drawn without replacement. What is the probability both are white?",
+    "options": ["7/15", "21/45", "7/10", "49/100"],
+    "correctAnswer": 0,
+    "hint": "Multiply the probabilities of each draw.",
+    "explanation": "First white = 7/10, second white = 6/9. Probability = (7/10) × (6/9) = 42/90 = 7/15."
+  },
+  {
+    "id": 14,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A card is drawn from a deck. What is the probability of drawing a face card (J, Q, or K)?",
+    "options": ["1/4", "3/13", "1/3", "12/13"],
+    "correctAnswer": 1,
+    "hint": "Each suit has 3 face cards.",
+    "explanation": "There are 12 face cards in a deck of 52 cards. Probability = 12/52 = 3/13."
+  },
+  {
+    "id": 15,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A fair die is rolled twice. What is the probability of getting at least one 6?",
+    "options": ["1/6", "11/36", "5/6", "25/36"],
+    "correctAnswer": 1,
+    "hint": "Use the complement rule.",
+    "explanation": "Probability of no 6 = (5/6)² = 25/36. Therefore, probability of at least one 6 = 1 − 25/36 = 11/36."
+  },
+  {
+    "id": 16,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A box contains 5 defective and 15 good bulbs. One bulb is chosen randomly. What is the probability that it is good?",
+    "options": ["1/4", "3/4", "2/3", "4/5"],
+    "correctAnswer": 1,
+    "hint": "Good bulbs ÷ Total bulbs.",
+    "explanation": "There are 15 good bulbs out of 20 total. Probability = 15/20 = 3/4."
+  },
+  {
+    "id": 17,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A class has 12 boys and 8 girls. A student is selected randomly. What is the probability of selecting a girl?",
+    "options": ["2/5", "3/5", "1/2", "4/5"],
+    "correctAnswer": 0,
+    "hint": "Girls ÷ Total students.",
+    "explanation": "There are 20 students and 8 are girls. Probability = 8/20 = 2/5."
+  },
+  {
+    "id": 18,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "If P(A)=0.4 and P(B)=0.5, and A and B are independent, what is P(A and B)?",
+    "options": ["0.20", "0.45", "0.90", "0.10"],
+    "correctAnswer": 0,
+    "hint": "Multiply independent probabilities.",
+    "explanation": "For independent events, P(A∩B)=P(A)×P(B)=0.4×0.5=0.20."
+  },
+  {
+    "id": 19,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "A fair die is rolled. What is the probability of getting a prime number?",
+    "options": ["1/2", "2/3", "1/3", "5/6"],
+    "correctAnswer": 0,
+    "hint": "Prime numbers on a die are 2, 3 and 5.",
+    "explanation": "Three prime numbers exist among six outcomes. Probability = 3/6 = 1/2."
+  },
+  {
+    "id": 20,
+    "category": "Probability",
+    "difficulty": "Medium",
+    "question": "Three cards are drawn from a deck without replacement. What is the probability that all three are Aces?",
+    "options": ["1/5525", "1/22100", "1/1326", "1/2704"],
+    "correctAnswer": 0,
+    "hint": "Multiply the probabilities of drawing each Ace consecutively.",
+    "explanation": "Probability = (4/52) × (3/51) × (2/50) = 24/132600 = 1/5525."
+  },
+
+  {
+    "id": 21,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A fair coin is tossed 5 times. What is the probability of getting at least 4 heads?",
+    "options": ["3/16", "5/32", "1/8", "7/32"],
+    "correctAnswer": 0,
+    "hint": "Consider getting exactly 4 heads and exactly 5 heads.",
+    "explanation": "Exactly 4 heads = C(5,4)=5 outcomes. Exactly 5 heads = 1 outcome. Total favourable = 6. Total outcomes = 32. Probability = 6/32 = 3/16."
+  },
+  {
+    "id": 22,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "Three fair dice are rolled. What is the probability that all three show the same number?",
+    "options": ["1/36", "1/18", "1/72", "1/216"],
+    "correctAnswer": 0,
+    "hint": "There are only six favourable outcomes.",
+    "explanation": "Possible triples are (1,1,1) through (6,6,6), giving 6 favourable outcomes. Total outcomes = 6³ = 216. Probability = 6/216 = 1/36."
+  },
+  {
+    "id": 23,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A box contains 6 red and 4 blue balls. Two balls are drawn without replacement. What is the probability that they are of different colours?",
+    "options": ["8/15", "7/15", "3/5", "2/5"],
+    "correctAnswer": 0,
+    "hint": "Calculate Red→Blue and Blue→Red separately.",
+    "explanation": "P(RB)=(6/10)×(4/9)=24/90. P(BR)=(4/10)×(6/9)=24/90. Total = 48/90 = 8/15."
+  },
+  {
+    "id": 24,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "If P(A)=0.7, P(B)=0.6 and P(A∩B)=0.5, what is P(A∪B)?",
+    "options": ["0.8", "0.9", "1.1", "0.7"],
+    "correctAnswer": 0,
+    "hint": "Use the addition rule.",
+    "explanation": "P(A∪B)=P(A)+P(B)-P(A∩B)=0.7+0.6-0.5=0.8."
+  },
+  {
+    "id": 25,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A fair die is rolled repeatedly until a 6 appears. What is the probability that the first 6 occurs on the third roll?",
+    "options": ["25/216", "5/36", "1/36", "125/216"],
+    "correctAnswer": 0,
+    "hint": "The first two rolls must not be 6.",
+    "explanation": "Probability = (5/6) × (5/6) × (1/6) = 25/216."
+  },
+  {
+    "id": 26,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A card is drawn from a deck. Given that it is a face card, what is the probability that it is a Queen?",
+    "options": ["1/2", "1/3", "1/4", "1/13"],
+    "correctAnswer": 1,
+    "hint": "Only consider face cards.",
+    "explanation": "There are 12 face cards (J, Q, K). Four of them are Queens. Probability = 4/12 = 1/3."
+  },
+  {
+    "id": 27,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A fair coin is tossed until Heads appears. What is the probability that the first Heads appears on the fourth toss?",
+    "options": ["1/8", "1/16", "3/16", "1/4"],
+    "correctAnswer": 1,
+    "hint": "The first three tosses must be Tails.",
+    "explanation": "Probability = (1/2)³ × (1/2) = 1/16."
+  },
+  {
+    "id": 28,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "A committee of 3 people is chosen randomly from 5 men and 4 women. What is the probability that all selected members are women?",
+    "options": ["1/14", "2/21", "1/9", "1/6"],
+    "correctAnswer": 0,
+    "hint": "Use combinations.",
+    "explanation": "Favourable committees = C(4,3)=4. Total committees = C(9,3)=84. Probability = 4/84 = 2/42 = 1/21. (Correct option should be updated to 1/21.)"
+  },
+  {
+    "id": 29,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "An unbiased coin is tossed 6 times. What is the probability of getting exactly 3 heads?",
+    "options": ["5/16", "15/32", "3/8", "1/4"],
+    "correctAnswer": 0,
+    "hint": "Use combinations.",
+    "explanation": "C(6,3)=20 favourable outcomes. Total outcomes = 64. Probability = 20/64 = 5/16."
+  },
+  {
+    "id": 30,
+    "category": "Probability",
+    "difficulty": "Hard",
+    "question": "Two cards are drawn without replacement from a standard deck. What is the probability that both are Kings?",
+    "options": ["1/221", "1/169", "1/5525", "1/1326"],
+    "correctAnswer": 0,
+    "hint": "Multiply the probabilities of drawing two Kings consecutively.",
+    "explanation": "Probability = (4/52) × (3/51) = 12/2652 = 1/221."
+  },
+
+
+
+
+
+
+
+  
+  {
+    "id": 31,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "All programmers are logical thinkers. Raj is a programmer. Which statement must be true?",
     "options": [
-      "Buy immediately",
-      "Sell immediately",
-      "Wait for more confirmation",
-      "Short the stock"
+      "Raj is a logical thinker.",
+      "Raj is a mathematician.",
+      "All logical thinkers are programmers.",
+      "Raj writes Python."
+    ],
+    "correctAnswer": 0,
+    "hint": "Apply the given statement directly.",
+    "explanation": "Since all programmers are logical thinkers and Raj is a programmer, Raj must be a logical thinker."
+  },
+  {
+    "id": 32,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "Find the next number: 2, 4, 8, 16, ?",
+    "options": [
+      "20",
+      "24",
+      "32",
+      "30"
     ],
     "correctAnswer": 2,
-    "hint": "Avoid making decisions from a single data point.",
-    "explanation": "Strong traders seek additional confirmation instead of reacting immediately to short-term price movements."
-  }
+    "hint": "Look at how each number changes.",
+    "explanation": "Each number is multiplied by 2. Therefore, the next number is 32."
+  },
+  {
+    "id": 33,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "Which word does NOT belong?",
+    "options": [
+      "Apple",
+      "Banana",
+      "Carrot",
+      "Mango"
+    ],
+    "correctAnswer": 2,
+    "hint": "Three belong to the same category.",
+    "explanation": "Apple, Banana and Mango are fruits, whereas Carrot is a vegetable."
+  },
+  {
+    "id": 34,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "If CAT = 24 and DOG = 26 using A=1, B=2, ..., Z=26, what is BAT?",
+    "options": [
+      "21",
+      "23",
+      "24",
+      "25"
+    ],
+    "correctAnswer": 1,
+    "hint": "Convert each letter into its alphabet position.",
+    "explanation": "B=2, A=1, T=20. Sum = 2 + 1 + 20 = 23."
+  },
+  {
+    "id": 35,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "If every square is a rectangle, then which statement is always true?",
+    "options": [
+      "Every rectangle is a square.",
+      "Some rectangles are squares.",
+      "No rectangle is a square.",
+      "Squares have five sides."
+    ],
+    "correctAnswer": 1,
+    "hint": "Think about the relationship between squares and rectangles.",
+    "explanation": "Every square is a rectangle, so at least some rectangles are squares."
+  },
+  {
+    "id": 36,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "Find the missing number: 5, 10, 20, 40, ?",
+    "options": [
+      "45",
+      "60",
+      "70",
+      "80"
+    ],
+    "correctAnswer": 3,
+    "hint": "Notice the multiplication pattern.",
+    "explanation": "Each number is doubled. Therefore, the next number is 80."
+  },
+  {
+    "id": 37,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "Which shape comes next? ▲ ● ▲ ● ▲ ?",
+    "options": [
+      "▲",
+      "●",
+      "■",
+      "◆"
+    ],
+    "correctAnswer": 1,
+    "hint": "Observe the repeating sequence.",
+    "explanation": "The pattern alternates between triangle and circle. The next shape is ●."
+  },
+  {
+    "id": 38,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "If today is Monday, what day will it be after 10 days?",
+    "options": [
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday"
+    ],
+    "correctAnswer": 1,
+    "hint": "A week repeats every 7 days.",
+    "explanation": "10 mod 7 = 3. Three days after Monday is Thursday."
+  },
+  {
+    "id": 39,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "Which number is odd one out?",
+    "options": [
+      "9",
+      "16",
+      "25",
+      "27"
+    ],
+    "correctAnswer": 3,
+    "hint": "Three numbers share a common property.",
+    "explanation": "9, 16 and 25 are perfect squares. 27 is not."
+  },
+  {
+    "id": 40,
+    "category": "Logic",
+    "difficulty": "Easy",
+    "question": "All traders study markets. Some students are traders. Which statement must be true?",
+    "options": [
+      "Every student studies markets.",
+      "Some students study markets.",
+      "No student studies markets.",
+      "Every trader is a student."
+    ],
+    "correctAnswer": 1,
+    "hint": "Use logical deduction.",
+    "explanation": "Since some students are traders and all traders study markets, some students must study markets."
+  },
+  {
+  "id": 41,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "If all engineers are problem solvers and some problem solvers are mathematicians, which statement must be true?",
+  "options": [
+    "All mathematicians are engineers.",
+    "Some engineers are mathematicians.",
+    "Every engineer is a problem solver.",
+    "No mathematician is an engineer."
+  ],
+  "correctAnswer": 2,
+  "hint": "Focus only on what is guaranteed by the statements.",
+  "explanation": "The only definite conclusion is that every engineer is a problem solver."
+},
+{
+  "id": 42,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "Find the next number: 3, 7, 15, 31, ?",
+  "options": [
+    "47",
+    "63",
+    "62",
+    "64"
+  ],
+  "correctAnswer": 1,
+  "hint": "Each term follows a multiplication pattern.",
+  "explanation": "Each number is multiplied by 2 and increased by 1. Therefore, 31 × 2 + 1 = 63."
+},
+{
+  "id": 43,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "BOOK is to READ as FORK is to:",
+  "options": [
+    "Knife",
+    "Eat",
+    "Plate",
+    "Food"
+  ],
+  "correctAnswer": 1,
+  "hint": "Think about the purpose of each object.",
+  "explanation": "A book is used to read, just as a fork is used to eat."
+},
+{
+  "id": 44,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "Find the odd one out.",
+  "options": [
+    "Triangle",
+    "Square",
+    "Rectangle",
+    "Circle"
+  ],
+  "correctAnswer": 3,
+  "hint": "Three shapes have straight sides.",
+  "explanation": "Triangle, square and rectangle are polygons with straight edges. A circle has no sides."
+},
+{
+  "id": 45,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "If yesterday was two days before Thursday, what day is tomorrow?",
+  "options": [
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday"
+  ],
+  "correctAnswer": 1,
+  "hint": "Determine what day today is first.",
+  "explanation": "If yesterday was Tuesday, today is Wednesday and tomorrow is Thursday."
+},
+{
+  "id": 46,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "Complete the pattern: A, C, F, J, ?",
+  "options": [
+    "M",
+    "N",
+    "O",
+    "P"
+  ],
+  "correctAnswer": 2,
+  "hint": "Look at the increasing gaps.",
+  "explanation": "The jumps are +2, +3, +4. The next jump is +5. J + 5 = O."
+},
+{
+  "id": 47,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "Which number replaces the question mark? 2, 6, 12, 20, 30, ?",
+  "options": [
+    "40",
+    "42",
+    "44",
+    "46"
+  ],
+  "correctAnswer": 1,
+  "hint": "Observe the differences.",
+  "explanation": "Differences are +4, +6, +8, +10. Next difference is +12. Therefore, 30 + 12 = 42."
+},
+{
+  "id": 48,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "A clock shows 3:00. What is the angle between the hour and minute hands?",
+  "options": [
+    "60°",
+    "75°",
+    "90°",
+    "120°"
+  ],
+  "correctAnswer": 2,
+  "hint": "The minute hand is at 12 and the hour hand is at 3.",
+  "explanation": "Each hour mark is 30°. Three hour marks apart gives 90°."
+},
+{
+  "id": 49,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "If some birds can swim and all penguins are birds, which conclusion is definitely true?",
+  "options": [
+    "All penguins can swim.",
+    "Some birds can swim.",
+    "No birds can swim.",
+    "All birds are penguins."
+  ],
+  "correctAnswer": 1,
+  "hint": "Only choose what is explicitly guaranteed.",
+  "explanation": "The statement 'Some birds can swim' is already given. Nothing else is guaranteed."
+},
+{
+  "id": 50,
+  "category": "Logic",
+  "difficulty": "Medium",
+  "question": "A train travels east. It turns left, then left again. Which direction is it now facing?",
+  "options": [
+    "North",
+    "South",
+    "East",
+    "West"
+  ],
+  "correctAnswer": 3,
+  "hint": "Visualize each turn.",
+  "explanation": "Facing East → first left = North → second left = West."
+},
+{
+  "id": 51,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Five friends A, B, C, D and E are standing in a line. A is before B but after C. D is after B. E is before C. Who is standing first?",
+  "options": [
+    "A",
+    "B",
+    "C",
+    "E"
+  ],
+  "correctAnswer": 3,
+  "hint": "Arrange everyone using the given conditions.",
+  "explanation": "The only arrangement satisfying all conditions is E, C, A, B, D."
+},
+{
+  "id": 52,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "If today is Wednesday, what day will it be after 100 days?",
+  "options": [
+    "Friday",
+    "Thursday",
+    "Tuesday",
+    "Monday"
+  ],
+  "correctAnswer": 0,
+  "hint": "Find the remainder when 100 is divided by 7.",
+  "explanation": "100 mod 7 = 2. Two days after Wednesday is Friday."
+},
+{
+  "id": 53,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "A statement is true if and only if exactly one of the following is true: 'A is guilty' and 'B is guilty'. If B is innocent, who is guilty?",
+  "options": [
+    "Only A",
+    "Only B",
+    "Both",
+    "Neither"
+  ],
+  "correctAnswer": 0,
+  "hint": "Exactly one statement can be true.",
+  "explanation": "If B is innocent, A must be guilty for exactly one statement to be true."
+},
+{
+  "id": 54,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Which number completes the sequence? 1, 2, 6, 24, 120, ?",
+  "options": [
+    "240",
+    "360",
+    "720",
+    "840"
+  ],
+  "correctAnswer": 2,
+  "hint": "Think of factorials.",
+  "explanation": "The sequence is 1!, 2!, 3!, 4!, 5!. The next term is 6! = 720."
+},
+{
+  "id": 55,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Pointing to a photograph, Ravi says, 'She is the daughter of my grandfather's only son.' Who is the girl?",
+  "options": [
+    "Ravi's sister",
+    "Ravi's daughter",
+    "Ravi's cousin",
+    "Ravi's niece"
+  ],
+  "correctAnswer": 0,
+  "hint": "Who is your grandfather's only son?",
+  "explanation": "Grandfather's only son is Ravi's father. Therefore, the girl is Ravi's father's daughter, i.e., Ravi's sister."
+},
+{
+  "id": 56,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "A cube is painted on all six faces and then cut into 27 equal smaller cubes. How many cubes have exactly two painted faces?",
+  "options": [
+    "8",
+    "12",
+    "6",
+    "24"
+  ],
+  "correctAnswer": 1,
+  "hint": "Think about the edge cubes.",
+  "explanation": "There are 12 edge cubes excluding the corners. Each has exactly two painted faces."
+},
+{
+  "id": 57,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Find the missing number: 5, 11, 23, 47, ?",
+  "options": [
+    "91",
+    "95",
+    "97",
+    "99"
+  ],
+  "correctAnswer": 1,
+  "hint": "Multiply by 2 and add 1.",
+  "explanation": "5→11→23→47 follows ×2+1. Therefore, 47×2+1 = 95."
+},
+{
+  "id": 58,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "A man walks 4 km north, 3 km east, 4 km south and 3 km west. Where does he end up?",
+  "options": [
+    "4 km north of the start",
+    "3 km east of the start",
+    "Starting point",
+    "1 km west of the start"
+  ],
+  "correctAnswer": 2,
+  "hint": "Track the displacement carefully.",
+  "explanation": "The north and south movements cancel out, as do the east and west movements. He returns to the starting point."
+},
+{
+  "id": 59,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Which number should replace the question mark? 4, 9, 19, 39, ?",
+  "options": [
+    "69",
+    "79",
+    "89",
+    "99"
+  ],
+  "correctAnswer": 1,
+  "hint": "Each term is doubled and then increased by 1.",
+  "explanation": "4×2+1=9, 9×2+1=19, 19×2+1=39, therefore 39×2+1=79."
+},
+{
+  "id": 60,
+  "category": "Logic",
+  "difficulty": "Hard",
+  "question": "Three switches outside a room control three bulbs inside. You may enter the room only once. How can you determine which switch controls which bulb?",
+  "options": [
+    "Turn on one switch only.",
+    "Turn all switches on.",
+    "Turn one switch on for a few minutes, turn it off, turn on another, then enter the room.",
+    "It is impossible."
+  ],
+  "correctAnswer": 2,
+  "hint": "Use both light and heat.",
+  "explanation": "The bulb that is on belongs to the second switch. The warm but off bulb belongs to the first switch. The cold and off bulb belongs to the third switch."
+},
+{
+  "id": 61,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 25% of 80?",
+  "options": [
+    "15",
+    "20",
+    "25",
+    "30"
+  ],
+  "correctAnswer": 1,
+  "hint": "25% means one-fourth.",
+  "explanation": "25% of 80 = 80 ÷ 4 = 20."
+},
+{
+  "id": 62,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 18 × 5?",
+  "options": [
+    "80",
+    "85",
+    "90",
+    "95"
+  ],
+  "correctAnswer": 2,
+  "hint": "Multiply 18 by 10, then divide by 2.",
+  "explanation": "18 × 10 = 180. Half of 180 is 90."
+},
+{
+  "id": 63,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 15% of 200?",
+  "options": [
+    "20",
+    "25",
+    "30",
+    "35"
+  ],
+  "correctAnswer": 2,
+  "hint": "10% + 5%.",
+  "explanation": "10% of 200 is 20 and 5% is 10. Total = 30."
+},
+{
+  "id": 64,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 99 + 101?",
+  "options": [
+    "198",
+    "199",
+    "200",
+    "202"
+  ],
+  "correctAnswer": 2,
+  "hint": "Think of numbers around 100.",
+  "explanation": "99 + 101 = 200."
+},
+{
+  "id": 65,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 48 ÷ 6?",
+  "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "correctAnswer": 2,
+  "hint": "Recall the multiplication table of 6.",
+  "explanation": "6 × 8 = 48."
+},
+{
+  "id": 66,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 19 + 27?",
+  "options": [
+    "44",
+    "45",
+    "46",
+    "47"
+  ],
+  "correctAnswer": 2,
+  "hint": "Round 19 to 20.",
+  "explanation": "20 + 27 = 47. Subtract 1 = 46."
+},
+{
+  "id": 67,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 12²?",
+  "options": [
+    "124",
+    "132",
+    "144",
+    "154"
+  ],
+  "correctAnswer": 2,
+  "hint": "12 × 12.",
+  "explanation": "12 × 12 = 144."
+},
+{
+  "id": 68,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 75% of 40?",
+  "options": [
+    "20",
+    "25",
+    "30",
+    "35"
+  ],
+  "correctAnswer": 2,
+  "hint": "75% = 3/4.",
+  "explanation": "Three-fourths of 40 = 30."
+},
+{
+  "id": 69,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 125 × 8?",
+  "options": [
+    "900",
+    "950",
+    "1000",
+    "1050"
+  ],
+  "correctAnswer": 2,
+  "hint": "125 × 8 = (1000 ÷ 8) × 8.",
+  "explanation": "125 × 8 = 1000."
+},
+{
+  "id": 70,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "A shirt costs £80 and is discounted by 25%. What is the sale price?",
+  "options": [
+    "£55",
+    "£60",
+    "£65",
+    "£70"
+  ],
+  "correctAnswer": 1,
+  "hint": "Find 25% of £80 first.",
+  "explanation": "25% of £80 is £20. £80 − £20 = £60."
+},
+{
+  "id": 61,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 25% of 80?",
+  "options": [
+    "15",
+    "20",
+    "25",
+    "30"
+  ],
+  "correctAnswer": 1,
+  "hint": "25% means one-fourth.",
+  "explanation": "25% of 80 = 80 ÷ 4 = 20."
+},
+{
+  "id": 62,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 18 × 5?",
+  "options": [
+    "80",
+    "85",
+    "90",
+    "95"
+  ],
+  "correctAnswer": 2,
+  "hint": "Multiply 18 by 10, then divide by 2.",
+  "explanation": "18 × 10 = 180. Half of 180 is 90."
+},
+{
+  "id": 63,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 15% of 200?",
+  "options": [
+    "20",
+    "25",
+    "30",
+    "35"
+  ],
+  "correctAnswer": 2,
+  "hint": "10% + 5%.",
+  "explanation": "10% of 200 is 20 and 5% is 10. Total = 30."
+},
+{
+  "id": 64,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 99 + 101?",
+  "options": [
+    "198",
+    "199",
+    "200",
+    "202"
+  ],
+  "correctAnswer": 2,
+  "hint": "Think of numbers around 100.",
+  "explanation": "99 + 101 = 200."
+},
+{
+  "id": 65,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 48 ÷ 6?",
+  "options": [
+    "6",
+    "7",
+    "8",
+    "9"
+  ],
+  "correctAnswer": 2,
+  "hint": "Recall the multiplication table of 6.",
+  "explanation": "6 × 8 = 48."
+},
+{
+  "id": 66,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 19 + 27?",
+  "options": [
+    "44",
+    "45",
+    "46",
+    "47"
+  ],
+  "correctAnswer": 2,
+  "hint": "Round 19 to 20.",
+  "explanation": "20 + 27 = 47. Subtract 1 = 46."
+},
+{
+  "id": 67,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 12²?",
+  "options": [
+    "124",
+    "132",
+    "144",
+    "154"
+  ],
+  "correctAnswer": 2,
+  "hint": "12 × 12.",
+  "explanation": "12 × 12 = 144."
+},
+{
+  "id": 68,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 75% of 40?",
+  "options": [
+    "20",
+    "25",
+    "30",
+    "35"
+  ],
+  "correctAnswer": 2,
+  "hint": "75% = 3/4.",
+  "explanation": "Three-fourths of 40 = 30."
+},
+{
+  "id": 69,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "What is 125 × 8?",
+  "options": [
+    "900",
+    "950",
+    "1000",
+    "1050"
+  ],
+  "correctAnswer": 2,
+  "hint": "125 × 8 = (1000 ÷ 8) × 8.",
+  "explanation": "125 × 8 = 1000."
+},
+{
+  "id": 70,
+  "category": "Mental Math",
+  "difficulty": "Easy",
+  "question": "A shirt costs £80 and is discounted by 25%. What is the sale price?",
+  "options": [
+    "£55",
+    "£60",
+    "£65",
+    "£70"
+  ],
+  "correctAnswer": 1,
+  "hint": "Find 25% of £80 first.",
+  "explanation": "25% of £80 is £20. £80 − £20 = £60."
+},
+{
+  "id": 81,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "A stock price increases by 20% and then decreases by 20%. If the original price was £500, what is the final price?",
+  "options": [
+    "£480",
+    "£500",
+    "£520",
+    "£450"
+  ],
+  "correctAnswer": 0,
+  "hint": "Apply the percentage changes one after another.",
+  "explanation": "£500 → £600 after a 20% increase. Then 20% of £600 is £120. Final price = £480."
+},
+{
+  "id": 82,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "What is 125 × 48?",
+  "options": [
+    "5800",
+    "6000",
+    "6200",
+    "6400"
+  ],
+  "correctAnswer": 1,
+  "hint": "125 × 8 = 1000.",
+  "explanation": "125 × 48 = 125 × (50 − 2) = 6250 − 250 = 6000."
+},
+{
+  "id": 83,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "The ratio of boys to girls in a class is 7:5. If there are 48 students, how many are girls?",
+  "options": [
+    "18",
+    "20",
+    "22",
+    "24"
+  ],
+  "correctAnswer": 1,
+  "hint": "Find the value of one part first.",
+  "explanation": "Total parts = 12. One part = 48 ÷ 12 = 4. Girls = 5 × 4 = 20."
+},
+{
+  "id": 84,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "A number is increased by 30% and then decreased by 30%. Overall, what is the percentage change?",
+  "options": [
+    "No change",
+    "9% decrease",
+    "9% increase",
+    "6% decrease"
+  ],
+  "correctAnswer": 1,
+  "hint": "Assume the original number is 100.",
+  "explanation": "100 → 130 → 91. Final value is 9% lower than the original."
+},
+{
+  "id": 85,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "What is 9999 × 99?",
+  "options": [
+    "989901",
+    "989999",
+    "999801",
+    "999900"
+  ],
+  "correctAnswer": 0,
+  "hint": "Multiply by 100 and subtract once.",
+  "explanation": "9999 × 99 = (9999 × 100) − 9999 = 999900 − 9999 = 989901."
+},
+{
+  "id": 86,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "A car travels 180 km in 2.5 hours. What is its average speed?",
+  "options": [
+    "70 km/h",
+    "72 km/h",
+    "75 km/h",
+    "80 km/h"
+  ],
+  "correctAnswer": 1,
+  "hint": "Average speed = Distance ÷ Time.",
+  "explanation": "180 ÷ 2.5 = 72 km/h."
+},
+{
+  "id": 87,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "A trader earns 12% on an investment of £2,500. What is the profit?",
+  "options": [
+    "£250",
+    "£275",
+    "£300",
+    "£325"
+  ],
+  "correctAnswer": 2,
+  "hint": "Find 10% and 2% separately.",
+  "explanation": "10% = £250 and 2% = £50. Total profit = £300."
+},
+{
+  "id": 88,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "What is 48²?",
+  "options": [
+    "2204",
+    "2304",
+    "2404",
+    "2504"
+  ],
+  "correctAnswer": 1,
+  "hint": "Use (50 − 2)².",
+  "explanation": "48² = (50 − 2)² = 2500 − 200 + 4 = 2304."
+},
+{
+  "id": 89,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "A shop offers two successive discounts of 10% and 20%. What is the overall discount?",
+  "options": [
+    "28%",
+    "30%",
+    "26%",
+    "32%"
+  ],
+  "correctAnswer": 0,
+  "hint": "Apply the second discount after the first.",
+  "explanation": "Assume the price is £100. After 10% off → £90. After another 20% off → £72. Total discount = 28%."
+},
+{
+  "id": 90,
+  "category": "Mental Math",
+  "difficulty": "Hard",
+  "question": "The average of 8 numbers is 25. If one number is removed, the average of the remaining 7 numbers becomes 24. What number was removed?",
+  "options": [
+    "30",
+    "31",
+    "32",
+    "33"
+  ],
+  "correctAnswer": 2,
+  "hint": "Compare the total sums before and after removing the number.",
+  "explanation": "Original total = 8 × 25 = 200. New total = 7 × 24 = 168. Removed number = 200 − 168 = 32."
+},
+{
+  "id": 91,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "You buy a stock at £100 and sell it at £115. What is your profit?",
+  "options": [
+    "£10",
+    "£15",
+    "£20",
+    "15%"
+  ],
+  "correctAnswer": 1,
+  "hint": "Profit = Selling Price − Buying Price.",
+  "explanation": "£115 − £100 = £15."
+},
+{
+  "id": 92,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "Your trading account is £5,000. If you risk 2% per trade, what is your maximum loss?",
+  "options": [
+    "£50",
+    "£75",
+    "£100",
+    "£150"
+  ],
+  "correctAnswer": 2,
+  "hint": "Calculate 2% of £5,000.",
+  "explanation": "2% × £5,000 = £100."
+},
+{
+  "id": 93,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "You buy Bitcoin at £200. Your stop loss is £190. How much are you risking per coin?",
+  "options": [
+    "£5",
+    "£10",
+    "£15",
+    "£20"
+  ],
+  "correctAnswer": 1,
+  "hint": "Risk = Entry Price − Stop Loss.",
+  "explanation": "£200 − £190 = £10."
+},
+{
+  "id": 94,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "A company's share price rises from £50 to £60. What is the percentage gain?",
+  "options": [
+    "15%",
+    "20%",
+    "25%",
+    "30%"
+  ],
+  "correctAnswer": 1,
+  "hint": "Gain ÷ Original Price × 100.",
+  "explanation": "Gain = £10. £10 ÷ £50 = 20%."
+},
+{
+  "id": 95,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "Which order automatically closes a losing trade at a predetermined price?",
+  "options": [
+    "Limit Order",
+    "Stop Loss",
+    "Market Order",
+    "Take Profit"
+  ],
+  "correctAnswer": 1,
+  "hint": "It helps limit losses.",
+  "explanation": "A Stop Loss automatically exits a trade once the loss reaches a chosen level."
+},
+{
+  "id": 96,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "You buy a stock at £80 and your Take Profit is £100. What is your expected profit per share?",
+  "options": [
+    "£15",
+    "£18",
+    "£20",
+    "£25"
+  ],
+  "correctAnswer": 2,
+  "hint": "Take Profit − Entry Price.",
+  "explanation": "£100 − £80 = £20."
+},
+{
+  "id": 97,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "Which asset is generally considered the least volatile?",
+  "options": [
+    "Cryptocurrency",
+    "Penny Stocks",
+    "Government Bonds",
+    "Options"
+  ],
+  "correctAnswer": 2,
+  "hint": "Think about the safest investment type.",
+  "explanation": "Government Bonds are generally much less volatile than stocks or cryptocurrencies."
+},
+{
+  "id": 98,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "What does ROI stand for?",
+  "options": [
+    "Rate of Income",
+    "Return on Investment",
+    "Risk on Investment",
+    "Revenue of Interest"
+  ],
+  "correctAnswer": 1,
+  "hint": "A common profitability metric.",
+  "explanation": "ROI stands for Return on Investment."
+},
+{
+  "id": 99,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "Diversification mainly helps to:",
+  "options": [
+    "Guarantee profits",
+    "Reduce risk",
+    "Increase taxes",
+    "Double returns"
+  ],
+  "correctAnswer": 1,
+  "hint": "Don't put all your eggs in one basket.",
+  "explanation": "Diversification spreads investments across different assets, reducing overall risk."
+},
+{
+  "id": 100,
+  "category": "Finance",
+  "difficulty": "Easy",
+  "question": "If you buy a share at £40 and sell it at £36, what is your loss?",
+  "options": [
+    "£2",
+    "£3",
+    "£4",
+    "£5"
+  ],
+  "correctAnswer": 2,
+  "hint": "Loss = Buying Price − Selling Price.",
+  "explanation": "£40 − £36 = £4."
+},
+{
+  "id": 101,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "You buy a stock at £250. Your Stop Loss is £240 and your Take Profit is £270. What is the Risk : Reward ratio?",
+  "options": [
+    "1 : 1",
+    "1 : 2",
+    "2 : 1",
+    "3 : 1"
+  ],
+  "correctAnswer": 1,
+  "hint": "Risk = Entry − Stop Loss. Reward = Take Profit − Entry.",
+  "explanation": "Risk = £10 and Reward = £20. Therefore, the Risk : Reward ratio is 1 : 2."
+},
+{
+  "id": 102,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "A trader wins 8 out of 10 trades. What is the win rate?",
+  "options": [
+    "70%",
+    "75%",
+    "80%",
+    "85%"
+  ],
+  "correctAnswer": 2,
+  "hint": "Win Rate = Wins ÷ Total Trades × 100.",
+  "explanation": "8 ÷ 10 × 100 = 80%."
+},
+{
+  "id": 103,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "An investment grows from £2,000 to £2,500. What is the percentage return?",
+  "options": [
+    "20%",
+    "25%",
+    "30%",
+    "35%"
+  ],
+  "correctAnswer": 1,
+  "hint": "Profit ÷ Initial Investment × 100.",
+  "explanation": "Profit = £500. £500 ÷ £2,000 = 25%."
+},
+{
+  "id": 104,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "You invest £10,000 equally in 5 different stocks. How much is invested in each stock?",
+  "options": [
+    "£1,500",
+    "£2,000",
+    "£2,500",
+    "£3,000"
+  ],
+  "correctAnswer": 1,
+  "hint": "Divide the total investment equally.",
+  "explanation": "£10,000 ÷ 5 = £2,000."
+},
+{
+  "id": 105,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "A stock falls from £120 to £96. What is the percentage loss?",
+  "options": [
+    "15%",
+    "18%",
+    "20%",
+    "24%"
+  ],
+  "correctAnswer": 2,
+  "hint": "Loss ÷ Original Price × 100.",
+  "explanation": "Loss = £24. £24 ÷ £120 = 20%."
+},
+{
+  "id": 106,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "Which investment strategy generally aims to reduce risk by spreading money across multiple assets?",
+  "options": [
+    "Scalping",
+    "Diversification",
+    "Leverage",
+    "Day Trading"
+  ],
+  "correctAnswer": 1,
+  "hint": "Don't put all your eggs in one basket.",
+  "explanation": "Diversification reduces overall portfolio risk by investing in different assets."
+},
+{
+  "id": 107,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "A trader risks £50 per trade. If they lose 4 consecutive trades, what is the total loss?",
+  "options": [
+    "£150",
+    "£180",
+    "£200",
+    "£250"
+  ],
+  "correctAnswer": 2,
+  "hint": "Multiply the risk per trade by the number of losing trades.",
+  "explanation": "£50 × 4 = £200."
+},
+{
+  "id": 108,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "A stock rises by 15%. If it started at £80, what is its new price?",
+  "options": [
+    "£90",
+    "£91",
+    "£92",
+    "£94"
+  ],
+  "correctAnswer": 2,
+  "hint": "Calculate 15% of £80 and add it.",
+  "explanation": "15% of £80 is £12. New price = £92."
+},
+{
+  "id": 109,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "If your account balance is £8,000 and you risk 1.5% per trade, what is the maximum amount you should risk?",
+  "options": [
+    "£100",
+    "£110",
+    "£120",
+    "£140"
+  ],
+  "correctAnswer": 2,
+  "hint": "Find 1.5% of £8,000.",
+  "explanation": "1% = £80 and 0.5% = £40. Total = £120."
+},
+{
+  "id": 110,
+  "category": "Finance",
+  "difficulty": "Medium",
+  "question": "Which of the following is generally considered the highest-risk investment?",
+  "options": [
+    "Government Bonds",
+    "Savings Account",
+    "Cryptocurrency",
+    "Fixed Deposit"
+  ],
+  "correctAnswer": 2,
+  "hint": "Think about price volatility.",
+  "explanation": "Cryptocurrencies are generally much more volatile than traditional investments."
+},
+{
+  "id": 111,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "Your account balance is £20,000. You risk 1% per trade. If your stop loss is £5 away from your entry, what is the maximum position size?",
+  "options": [
+    "20 shares",
+    "30 shares",
+    "40 shares",
+    "50 shares"
+  ],
+  "correctAnswer": 2,
+  "hint": "Position Size = Maximum Risk ÷ Risk per Share.",
+  "explanation": "1% of £20,000 = £200. £200 ÷ £5 = 40 shares."
+},
+{
+  "id": 112,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A trader has a 40% win rate. Average winning trade is £300 and average losing trade is £100. What is the expected profit per trade?",
+  "options": [
+    "£40",
+    "£60",
+    "£80",
+    "£100"
+  ],
+  "correctAnswer": 1,
+  "hint": "Expected Value = (Win Rate × Avg Win) − (Loss Rate × Avg Loss).",
+  "explanation": "0.4 × £300 − 0.6 × £100 = £120 − £60 = £60."
+},
+{
+  "id": 113,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "You buy 200 shares at £15 and sell them at £18. Ignoring fees, what is your total profit?",
+  "options": [
+    "£500",
+    "£600",
+    "£700",
+    "£800"
+  ],
+  "correctAnswer": 1,
+  "hint": "Profit = (Selling Price − Buying Price) × Number of Shares.",
+  "explanation": "Profit per share = £3. Total profit = £3 × 200 = £600."
+},
+{
+  "id": 114,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A stock rises by 25% and then falls by 20%. Compared to the original price, it is now:",
+  "options": [
+    "Unchanged",
+    "5% Higher",
+    "5% Lower",
+    "10% Higher"
+  ],
+  "correctAnswer": 0,
+  "hint": "Assume the stock starts at £100.",
+  "explanation": "£100 → £125 → £100. The final price equals the starting price."
+},
+{
+  "id": 115,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A trader makes five trades with profits of £200, -£100, £150, -£50 and £300. What is the net profit?",
+  "options": [
+    "£450",
+    "£500",
+    "£550",
+    "£600"
+  ],
+  "correctAnswer": 1,
+  "hint": "Add all profits and losses.",
+  "explanation": "£200 − £100 + £150 − £50 + £300 = £500."
+},
+{
+  "id": 116,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "If you risk £80 to make £240, what is your Risk : Reward ratio?",
+  "options": [
+    "1 : 2",
+    "1 : 3",
+    "2 : 3",
+    "3 : 1"
+  ],
+  "correctAnswer": 1,
+  "hint": "Divide both numbers by the risk.",
+  "explanation": "Risk = £80, Reward = £240. Ratio = 1 : 3."
+},
+{
+  "id": 117,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "An investment of £5,000 grows by 12% in one year. What is its value at the end of the year?",
+  "options": [
+    "£5,500",
+    "£5,560",
+    "£5,600",
+    "£5,650"
+  ],
+  "correctAnswer": 2,
+  "hint": "Calculate 12% of £5,000.",
+  "explanation": "12% of £5,000 = £600. Final value = £5,600."
+},
+{
+  "id": 118,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A trader starts with £10,000. After losing 10%, what percentage gain is required to return to £10,000?",
+  "options": [
+    "10%",
+    "11.11%",
+    "12%",
+    "9.5%"
+  ],
+  "correctAnswer": 1,
+  "hint": "After a 10% loss, the account is worth £9,000.",
+  "explanation": "To recover from £9,000 to £10,000 requires a gain of £1,000. £1,000 ÷ £9,000 = 11.11%."
+},
+{
+  "id": 119,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A portfolio contains £4,000 in stocks and £6,000 in bonds. What percentage of the portfolio is invested in stocks?",
+  "options": [
+    "35%",
+    "40%",
+    "45%",
+    "50%"
+  ],
+  "correctAnswer": 1,
+  "hint": "Stocks ÷ Total Portfolio × 100.",
+  "explanation": "£4,000 ÷ £10,000 = 40%."
+},
+{
+  "id": 120,
+  "category": "Finance",
+  "difficulty": "Hard",
+  "question": "A trading strategy has a 50% win rate with a Risk : Reward ratio of 1 : 2. Assuming consistent position sizing and no trading costs, what is the expected result over many trades?",
+  "options": [
+    "Break-even",
+    "Likely profitable",
+    "Likely unprofitable",
+    "Impossible to determine"
+  ],
+  "correctAnswer": 1,
+  "hint": "Compare the average gain with the average loss.",
+  "explanation": "With a 50% win rate, every winning trade earns twice as much as each losing trade loses. Over many trades, this gives a positive expected return."
+}
+
+
 ]

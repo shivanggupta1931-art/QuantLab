@@ -1,281 +1,1225 @@
-/* ===========================
+
+
+
+
+
+
+
+
+
+
+
+/* =========================================================
    TRAINING PAGE
-=========================== */
+========================================================= */
 
 .training{
-    padding:40px 0 80px;
+
+    position:relative;
+    overflow:hidden;
+
+    padding:40px 0 90px;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 15%,
+            rgba(59,130,246,.16),
+            transparent 28%
+        ),
+
+        radial-gradient(
+            circle at 90% 20%,
+            rgba(37,99,235,.12),
+            transparent 25%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(34,197,94,.08),
+            transparent 30%
+        ),
+
+        linear-gradient(
+    180deg,
+    #12233d,
+    #0d1c33
+);
+
 }
 
+.training::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:550px;
+    height:550px;
+
+    top:-250px;
+    left:-220px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(59,130,246,.28),
+            transparent 70%
+        );
+
+    filter:blur(80px);
+
+    pointer-events:none;
+
+}
+
+
+.training::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:450px;
+    height:450px;
+
+    bottom:-220px;
+    right:-170px;
+
+    border-radius:50%;
+
+    background:
+        radial-gradient(
+            rgba(96,165,250,.18),
+            transparent 70%
+        );
+
+    filter:blur(90px);
+
+    pointer-events:none;
+
+}
 .container{
-    width:min(1100px,90%);
+
+    width:min(1100px,92%);
     margin:auto;
+
 }
 
-/* ===========================
-   BACK BUTTON
-=========================== */
+/* =========================================================
+   BACK LINK
+========================================================= */
 
 .back-link{
-    display:inline-block;
-    margin-bottom:30px;
+
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+
+    margin-bottom:22px;
+
     color:var(--text-secondary);
+
     text-decoration:none;
-    transition:.25s;
+
+    font-weight:600;
+
+    transition:.3s;
+
 }
 
 .back-link:hover{
+
     color:var(--primary);
+
+    transform:translateX(-4px);
+
 }
 
-/* ===========================
+/* =========================================================
    HERO
-=========================== */
+========================================================= */
 
 .training-hero{
+
+    position:relative;
+
+    overflow:hidden;
+
     display:flex;
     align-items:center;
-    gap:28px;
+    gap:32px;
 
-    padding:35px;
+    padding:42px;
 
-    background:var(--bg-card);
+    border-radius:26px;
 
-    border:1px solid var(--border-color);
+    /* background:
+    linear-gradient(
+        145deg,
+        #1b2238 0%,
+        #202a45 45%,
+        #25314d 100%
+    ); */
+    background:
+linear-gradient(
+    180deg,
+    #12233d,
+    #0d1c33
+);
 
-    border-radius:20px;
+    border:1px solid rgba(59,130,246,.20);
 
-    box-shadow:var(--shadow);
+    /* box-shadow:
+        0 35px 70px rgba(0,0,0,.40),
+        inset 0 1px 0 rgba(255,255,255,.05); */
+        box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
 }
 
+.training-hero::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:380px;
+    height:380px;
+
+    top:-180px;
+    right:-150px;
+
+    background:
+    radial-gradient(
+        rgba(59,130,246,.22),
+        transparent 70%
+    );
+
+}
+
+.training-hero::after{
+
+    content:"";
+
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    left:-120px;
+    bottom:-140px;
+
+    background:
+    radial-gradient(
+        rgba(34,197,94,.15),
+        transparent 70%
+    );
+
+}
+
+/* =========================================================
+   HERO ICON
+========================================================= */
+
 .training-icon{
-    width:90px;
-    height:90px;
+
+    flex-shrink:0;
+
+    width:105px;
+    height:105px;
+
+    border-radius:26px;
 
     display:flex;
     align-items:center;
     justify-content:center;
 
-    font-size:42px;
+    font-size:46px;
 
-    border-radius:18px;
+    background:
+    linear-gradient(
+        145deg,
+        rgba(37,99,235,.30),
+        rgba(96,165,250,.18)
+    );
 
-    background:rgba(37,99,235,.15);
+    border:1px solid rgba(255,255,255,.06);
+/* 
+    box-shadow:
+        0 18px 35px rgba(37,99,235,.25),
+        inset 0 2px 4px rgba(255,255,255,.08); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
 }
 
 .training-content{
+
     flex:1;
+
 }
 
 .training-badge{
+
     display:inline-block;
 
-    padding:6px 14px;
+    padding:7px 16px;
 
-    margin-bottom:15px;
+    margin-bottom:16px;
 
     border-radius:999px;
 
-    background:rgba(37,99,235,.12);
+    background:rgba(37,99,235,.16);
 
-    color:var(--primary);
+    color:#7cb8ff;
 
-    font-size:.9rem;
+    font-weight:700;
 
-    font-weight:600;
+    font-size:.85rem;
+
+    letter-spacing:.4px;
+
 }
 
 .training-content h1{
-    margin-bottom:12px;
 
-    color:var(--text-primary);
+    color:#fff;
 
-    font-size:2.2rem;
+    font-size:2.5rem;
+
+    margin-bottom:14px;
+
+    font-weight:700;
+
 }
 
 .training-content p{
+
+    color:#c8d3ea;
+
     max-width:700px;
 
-    color:var(--text-secondary);
+    line-height:1.8;
 
-    line-height:1.7;
+    font-size:1rem;
+
 }
 
-/* ===========================
+/* =========================================================
    PROGRESS
-=========================== */
+========================================================= */
 
 .training-progress{
-    margin-top:30px;
 
-    background:var(--bg-card);
+    margin-top:28px;
 
-    border:1px solid var(--border-color);
-
-    border-radius:18px;
-
-    padding:25px;
 }
 
 .progress-header{
+
     display:flex;
 
     justify-content:space-between;
 
-    margin-bottom:15px;
+    align-items:center;
 
-    color:var(--text-primary);
+    margin-bottom:12px;
+
+    color:white;
 
     font-weight:600;
+
 }
 
 .progress-bar{
+
     width:100%;
 
-    height:12px;
+    height:15px;
 
-    background:rgba(255,255,255,.08);
+    background:#111827;
 
     border-radius:999px;
 
     overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
+
+    /* box-shadow:
+        inset 0 4px 10px rgba(0,0,0,.55); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
 }
 
 .progress-fill{
-    height:100%;
 
     width:0%;
 
-    background:linear-gradient(
+    height:100%;
+
+    border-radius:999px;
+
+    background:
+    linear-gradient(
         90deg,
-        var(--primary),
-        var(--secondary)
+        #22c55e,
+        #3b82f6
     );
 
-    transition:width .5s ease;
+    /* box-shadow:
+
+        0 0 18px rgba(34,197,94,.40); */
+
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+    transition:width .6s ease;
+
 }
 
-/* ===========================
+/* =========================================================
    STATS
-=========================== */
+========================================================= */
 
 .training-stats{
+
     display:grid;
 
     grid-template-columns:repeat(3,1fr);
 
-    gap:20px;
+    gap:22px;
 
-    margin-top:30px;
+    margin-top:34px;
+
 }
 
 .training-stat{
-    background:var(--bg-card);
 
-    border:1px solid var(--border-color);
+    padding:28px;
 
-    border-radius:18px;
+    border-radius:20px;
 
-    padding:25px;
+    background:
+    linear-gradient(
+        180deg,
+        #232c45,
+        #1b2238
+    );
 
-    text-align:center;
+    border:1px solid rgba(255,255,255,.05);
 
-    transition:.3s;
+    /* box-shadow:
+        0 20px 40px rgba(0,0,0,.28); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+    transition:.35s;
+
 }
 
 .training-stat:hover{
-    transform:translateY(-5px);
 
-    border-color:var(--primary);
+    transform:
+        translateY(-8px);
+
+    border-color:rgba(59,130,246,.35);
+
+    box-shadow:
+        0 30px 55px rgba(0,0,0,.35),
+        0 0 30px rgba(59,130,246,.15);
+
 }
 
 .training-stat span{
+
     display:block;
 
-    margin-bottom:10px;
+    margin-bottom:12px;
 
-    color:var(--text-secondary);
+    color:#9fb1d8;
+
+    font-size:.9rem;
+
 }
 
 .training-stat strong{
-    font-size:1.2rem;
 
-    color:var(--text-primary);
+    font-size:1.35rem;
+
+    color:white;
+
 }
 
-/* ===========================
+/* =========================================================
    START BUTTON
-=========================== */
+========================================================= */
 
 .training-start{
+
+    margin-top:42px;
+
     text-align:center;
 
-    margin-top:40px;
 }
 
 .btn{
+
     border:none;
 
     cursor:pointer;
 
-    border-radius:12px;
+    padding:15px 32px;
 
-    padding:14px 30px;
+    border-radius:14px;
+
+    font-weight:700;
+
+    font-size:1rem;
+
+    transition:.3s;
+
+}
+
+.btn-primary{
+
+    color:white;
+
+    background:
+    linear-gradient(
+        145deg,
+        #3b82f6,
+        #2563eb
+    );
+
+    /* box-shadow:
+        0 18px 35px rgba(37,99,235,.35); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.btn-primary:hover{
+
+    transform:
+        translateY(-4px)
+        scale(1.03);
+/* 
+    box-shadow:
+        0 24px 45px rgba(37,99,235,.45); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.btn-primary:active{
+
+    transform:translateY(-1px);
+
+}
+
+/* Existing class kept */
+
+.startTrainingBtn{
+
+  background:
+linear-gradient(
+    180deg,
+    #12233d,
+    #0d1c33
+);
+    color:white;
+
+}
+
+/* =========================================================
+   TRAINING SESSION
+========================================================= */
+
+.training-session{
+
+    margin-top:55px;
+
+    min-height:420px;
+
+    padding:40px;
+
+    border-radius:26px;
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:
+    linear-gradient(
+        180deg,
+        #202942 0%,
+        #1b2238 100%
+    );
+
+    border:1px solid rgba(59,130,246,.15);
+
+    /* box-shadow:
+        0 30px 60px rgba(0,0,0,.40); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.training-session::before{
+
+    content:"";
+
+    position:absolute;
+
+    width:300px;
+    height:300px;
+
+    top:-120px;
+    right:-120px;
+
+    background:
+    radial-gradient(
+        rgba(59,130,246,.10),
+        transparent 70%
+    );
+
+}
+
+.training-session>*{
+
+    position:relative;
+    z-index:2;
+
+}
+
+/* =========================================================
+   QUESTION CARD
+========================================================= */
+
+.question-card{
+
+    animation:fadeQuestion .45s ease;
+
+}
+
+.question-card h2{
+
+    color:#8fb8ff;
+
+    font-size:1rem;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+
+    margin-bottom:24px;
+
+}
+
+.question-text{
+
+    color:white;
+
+    font-size:1.75rem;
+
+    font-weight:700;
+
+    line-height:1.6;
+
+    margin-bottom:36px;
+
+}
+
+/* =========================================================
+   OPTIONS
+========================================================= */
+
+.options{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.option-btn{
+
+    width:100%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:flex-start;
+
+    padding:20px 24px;
+
+    border-radius:16px;
+
+    background:#182131;
+
+    border:2px solid rgba(255,255,255,.08);
+
+    color:#e8eefc;
 
     font-size:1rem;
 
     font-weight:600;
 
-    transition:.25s;
+    cursor:pointer;
+
+    transition:.3s;
+
+    /* box-shadow:
+        inset 0 1px 0 rgba(255,255,255,.03); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
 }
 
-.btn-primary{
-    background:var(--primary);
+.option-btn:hover{
+
+    transform:translateX(8px);
+
+    border-color:#3b82f6;
+
+    background:#202c44;
+
+    box-shadow:
+        0 14px 28px rgba(59,130,246,.18);
+
+}
+
+.option-btn.selected{
+
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
+
+    border-color:#60a5fa;
 
     color:white;
+/* 
+    box-shadow:
+        0 18px 35px rgba(37,99,235,.35); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
 }
 
-.btn-primary:hover{
+.option-btn.correct{
+
+    background:
+    linear-gradient(
+        135deg,
+        #15803d,
+        #22c55e
+    );
+
+    border-color:#22c55e;
+
+    color:white;
+/* 
+    box-shadow:
+        0 18px 35px rgba(34,197,94,.35); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.option-btn.wrong{
+
+    background:
+    linear-gradient(
+        135deg,
+        #dc2626,
+        #ef4444
+    );
+
+    border-color:#ef4444;
+
+    color:white;
+/* 
+    box-shadow:
+
+        0 18px 35px rgba(239,68,68,.30); */
+    box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+.option-btn:disabled{
+
+    cursor:default;
+
+}
+
+/* =========================================================
+   SUBMIT BUTTON
+========================================================= */
+
+#submitAnswerBtn{
+
+    margin-top:35px;
+
+    width:100%;
+
+    padding:18px;
+
+    font-size:1rem;
+
+}
+
+#submitAnswerBtn:disabled{
+
+    opacity:.55;
+
+    cursor:not-allowed;
+
+    transform:none;
+
+    /* box-shadow:none; */
+   box-shadow:
+
+    0 35px 80px rgba(0,0,0,.45),
+
+    0 10px 30px rgba(37,99,235,.12),
+
+    inset 0 1px 0 rgba(255,255,255,.05);
+
+}
+
+/* =========================================================
+   EXPLANATION
+========================================================= */
+
+.explanation-box{
+
+    margin-top:35px;
+
+    padding:24px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        180deg,
+        rgba(59,130,246,.08),
+        rgba(34,197,94,.05)
+    );
+
+    border:1px solid rgba(59,130,246,.20);
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,.25);
+
+    animation:fadeQuestion .45s ease;
+
+}
+
+.explanation-box h3{
+
+    margin-bottom:14px;
+
+    color:white;
+
+}
+
+.explanation-box p{
+
+    color:#d8e2f5;
+
+    line-height:1.8;
+
+}
+
+/* =========================================================
+   SMALL ANIMATIONS
+========================================================= */
+
+@keyframes fadeQuestion{
+
+    from{
+
+        opacity:0;
+
+        transform:
+        translateY(18px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+        translateY(0);
+
+    }
+
+}
+
+/* =========================================================
+   RESULTS
+========================================================= */
+
+.result-card{
+
+    margin-top:20px;
+
+    padding:45px;
+
+    border-radius:24px;
+
+    text-align:center;
+
+    background:
+    linear-gradient(
+        180deg,
+        #202942,
+        #1b2238
+    );
+
+    border:1px solid rgba(59,130,246,.15);
+
+    box-shadow:
+        0 30px 60px rgba(0,0,0,.40);
+
+    animation:fadeQuestion .5s ease;
+
+}
+
+.result-card h1{
+
+    font-size:2.4rem;
+
+    color:white;
+
+    margin-bottom:40px;
+
+}
+
+.result-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(2,1fr);
+
+    gap:22px;
+
+    margin-bottom:40px;
+
+}
+
+.result-box{
+
+    padding:28px;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(
+        180deg,
+        #252f4b,
+        #1b2238
+    );
+
+    border:1px solid rgba(255,255,255,.05);
+
+    box-shadow:
+        0 20px 35px rgba(0,0,0,.30);
+
+    transition:.3s;
+
+}
+
+.result-box:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.result-box:nth-child(1){
+
+    border-top:4px solid #3b82f6;
+
+}
+
+.result-box:nth-child(2){
+
+    border-top:4px solid #22c55e;
+
+}
+
+.result-box:nth-child(3){
+
+    border-top:4px solid #60a5fa;
+
+}
+
+.result-box:nth-child(4){
+
+    border-top:4px solid #ef4444;
+
+}
+
+.result-box span{
+
+    display:block;
+
+    color:#9fb1d8;
+
+    font-size:.95rem;
+
+    margin-bottom:12px;
+
+}
+
+.result-box h2{
+
+    color:white;
+
+    font-size:2.2rem;
+
+    font-weight:700;
+
+}
+
+/* =========================================================
+   RESULT BUTTONS
+========================================================= */
+
+.result-buttons{
+
+    display:flex;
+
+    justify-content:center;
+
+    gap:20px;
+
+    flex-wrap:wrap;
+
+}
+
+.result-buttons button{
+
+    min-width:220px;
+
+    padding:16px 30px;
+
+}
+
+.result-buttons .btn{
+
+    background:#2b3550;
+
+    color:white;
+
+    border:1px solid rgba(255,255,255,.08);
+
+    transition:.3s;
+
+}
+
+.result-buttons .btn:hover{
+
+    background:#34415f;
+
     transform:translateY(-3px);
 
-    box-shadow:0 12px 25px rgba(37,99,235,.35);
 }
 
-/* ===========================
-   SESSION
-=========================== */
+.result-buttons .btn-primary{
 
-.training-session{
-    margin-top:50px;
+    background:
+    linear-gradient(
+        135deg,
+        #2563eb,
+        #3b82f6
+    );
 
-    min-height:250px;
-
-    background:var(--bg-card);
-
-    border:1px solid var(--border-color);
-
-    border-radius:20px;
-
-    padding:30px;
 }
 
-/* ===========================
+.result-buttons .btn-primary:hover{
+
+    box-shadow:
+        0 18px 35px rgba(37,99,235,.35);
+
+}
+
+/* =========================================================
    RESPONSIVE
-=========================== */
+========================================================= */
 
-@media(max-width:768px){
+@media(max-width:900px){
 
     .training-hero{
+
         flex-direction:column;
 
         text-align:center;
+
     }
 
-    .training-stats{
-        grid-template-columns:1fr;
+    .training-icon{
+
+        margin-bottom:10px;
+
+    }
+
+}
+
+@media(max-width:768px){
+
+    .training{
+
+        padding:25px 0 70px;
+
     }
 
     .training-content h1{
-        font-size:1.8rem;
+
+        font-size:2rem;
+
+    }
+
+    .training-session{
+
+        padding:28px;
+
+    }
+
+    .question-text{
+
+        font-size:1.4rem;
+
+    }
+
+    .training-stats{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .result-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .result-buttons{
+
+        flex-direction:column;
+
+        align-items:center;
+
+    }
+
+    .result-buttons button{
+
+        width:100%;
+
+    }
+
+}
+
+@media(max-width:550px){
+
+    .training-hero{
+
+        padding:28px;
+
+    }
+
+    .training-session{
+
+        padding:22px;
+
+    }
+
+    .question-text{
+
+        font-size:1.25rem;
+
+    }
+
+    .option-btn{
+
+        padding:16px;
+
+    }
+
+    .result-card{
+
+        padding:28px;
+
     }
 
 }
