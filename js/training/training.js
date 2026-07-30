@@ -5,6 +5,25 @@
 let selectedAnswer = null;
 
 let score=0;
+const TOTAL_QUESTIONS = 30;
+
+let progress = JSON.parse(localStorage.getItem("skillProgress")) || {
+    probability: 0,
+    logic: 0,
+    mentalmath: 0,
+    finance: 0
+};
+
+
+
+
+
+function saveProgress() {
+    localStorage.setItem(
+        "skillProgress",
+        JSON.stringify(progress)
+    );
+}
 
 
 
@@ -70,10 +89,12 @@ function showResults() {
 
     document.getElementById("retryBtn").onclick = () => {
 
-        currentQuestionIndex = 0;
-        // score = 0;
-        selectedAnswer = null;
+        progress[skill.id] = 0;
+        saveProgress();
 
+        currentQuestionIndex = 0;
+        score = 0;
+        selectedAnswer = null;
         renderQuestion();
 
     };
@@ -148,6 +169,20 @@ function nextQuestion() {
 
     currentQuestionIndex++;
 
+
+
+    progress[skill.id] = currentQuestionIndex;
+    saveProgress();
+
+    skill.progress = Math.round(
+    (currentQuestionIndex / skillQuestions.length) * 100
+    );
+
+    trainingProgressValue.textContent = skill.progress + "%";
+    trainingProgressFill.style.width = skill.progress + "%";
+
+
+
     selectedAnswer = null;
 
     if (currentQuestionIndex >= skillQuestions.length) {
@@ -215,8 +250,19 @@ function loadTrainingSkill() {
     trainingTitle.textContent = skill.title;
     trainingDescription.textContent = skill.description;
 
-    trainingProgressValue.textContent = skill.progress + "%";
-    trainingProgressFill.style.width = skill.progress + "%";
+    // trainingProgressValue.textContent = skill.progress + "%";
+    // trainingProgressFill.style.width = skill.progress + "%";
+
+
+    const completed = progress[skill.id];
+
+    const percentage = Math.round(
+        (completed / TOTAL_QUESTIONS) * 100
+    );
+
+    trainingProgressValue.textContent = percentage + "%";
+    trainingProgressFill.style.width = percentage + "%";
+
 
     trainingQuestions.textContent = skill.totalQuestions;
     trainingDuration.textContent = skill.duration;
@@ -294,6 +340,9 @@ function renderQuestion() {
 }
 
 function startTraining() {
+    if (progress[skill.id] > 0) {
+    startTrainingBtn.style.display = "none";
+}
 
     renderQuestion();
 
@@ -336,6 +385,19 @@ async function init() {
     loadTrainingSkill();
 
     await loadQuestions();
+
+    currentQuestionIndex = progress[skill.id];
+
+
+    if (currentQuestionIndex >= skillQuestions.length) {
+        showResults();
+    } else {
+        renderQuestion();
+    }
+
+    if (currentQuestionIndex < skillQuestions.length) {
+        renderQuestion();
+    }
 
 }
 

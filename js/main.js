@@ -249,3 +249,37 @@ thinkingSteps.forEach(step => {
     });
 
 });
+
+
+
+const timerElement=document.getElementById("dailyChallengeTimer");
+function updateDailyChallengeTimer() {
+
+    if (!timerElement) return;
+
+    const now = new Date();
+
+    const nextReset = new Date(now);
+
+    nextReset.setHours(24, 0, 0, 0);
+
+    const diff = nextReset - now;
+
+    const hours = Math.floor(diff / (1000 * 60 * 60));
+
+    const minutes = Math.floor(
+        (diff % (1000 * 60 * 60)) / (1000 * 60)
+    );
+
+    const seconds = Math.floor(
+        (diff % (1000 * 60)) / 1000
+    );
+
+    timerElement.textContent =
+        `Resets in ${hours}h ${minutes}m ${seconds}s`;
+
+}
+
+updateDailyChallengeTimer();
+
+setInterval(updateDailyChallengeTimer, 1000);

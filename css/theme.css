@@ -89,3 +89,7 @@
     --transition-slow:.5s ease;
 
 }
+
+html {
+    scroll-behavior: smooth;
+}
