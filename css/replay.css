@@ -378,3 +378,16 @@
     font-weight:600;
 
 }
+
+#nextCandleBtn{
+    width:100%;
+    margin-top:18px;
+}
+
+.shortcut-hint{
+    display:block;
+    text-align:center;
+    margin-top:8px;
+    color:#8b95a7;
+    font-size:13px;
+}

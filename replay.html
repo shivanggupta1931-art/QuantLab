@@ -73,118 +73,158 @@
 
 
 
-            <aside class="sidebar">
-                <div class="card">
-                    <h3>Current Position</h3>
-                    <div class="info-row">
-                        <span>Status</span>
-                        <strong id="positionStatus">None</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Entry Price</span>
-                        <strong id="entryPrice">--</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Current Price</span>
-                        <strong id="currentPrice">--</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Size</span>
-                        <strong id="positionSizeValue">--</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>P/L</span>
-                        <strong id="profitLoss">0</strong>
-                    </div>
+        <aside class="sidebar">
+
+            <!-- Current Position -->
+            <div class="card">
+                <h3>Current Position</h3>
+
+                <div class="info-row">
+                    <span>Status</span>
+                    <strong id="positionStatus">None</strong>
                 </div>
 
-
-                <div class="card">
-                    <h3>Session summary</h3>
-                    <div class="info-row">
-                        <span>Total Trades</span>
-                        <strong id="totalTrades">0</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Winning Trades</span>
-                        <strong id="winningTrades" >0</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Losing Trades</span>
-                        <strong id="losingTrades" >0</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Stop Loss</span>
-                        <strong id="stopLossValue">--</strong>
-                    </div>
-                     <div class="info-row">
-                        <span>Win Rate </span>
-                        <strong id="winRate">0%</strong>
-                    </div>
-                    <div class="info-row">
-                        <span>Next P/L </span>
-                        <strong id="netProfit">0.00</strong>
-                    </div>
-
-                   
-                    
-                    
-                </div>
-                <div class="summary-card">
-                        <span>Account Balance</span>
-                        <h2 id="accountBalance">$1,00,000</h2>
+                <div class="info-row">
+                    <span>Entry Price</span>
+                    <strong id="entryPrice">--</strong>
                 </div>
 
+                <div class="info-row">
+                    <span>Current Price</span>
+                    <strong id="currentPrice">--</strong>
+                </div>
 
+                <div class="info-row">
+                    <span>Size</span>
+                    <strong id="positionSizeValue">--</strong>
+                </div>
 
+                <div class="info-row">
+                    <span>P/L</span>
+                    <strong id="profitLoss">0</strong>
+                </div>
+            </div>
 
-                
+            <!-- Account Balance -->
+            <div class="summary-card">
+                <span>Account Balance</span>
+                <h2 id="accountBalance">$1,00,000</h2>
+            </div>
 
+            <!-- Position Size -->
+            <div class="position-size">
+                <label for="positionSize">
+                    Position Size
+                </label>
+
+                <input
+                    type="number"
+                    id="positionSize"
+                    value="1"
+                    min="1"
+                    required>
+            </div>
+
+            <!-- Trade Panel -->
+            <div class="trade-panel">
 
                 <div class="position-size">
-                    <label for="positionSize">
-                        Position Size
-                    </label>
-                    <input type="number"
-                           id="positionSize"
-                           value="1"
-                           min="1"
-                           required>
-                           
+                    <label>Stop Loss</label>
+
+                    <input
+                        type="number"
+                        id="stopLoss"
+                        step="100">
                 </div>
 
-                
+                <div class="position-size">
+                    <label>Take Profit</label>
 
-                <div class="trade-panel">
-                        <div class="position-size">
-                            <label for="">Stop Loss</label>
-                            <input type="number"
-                                   id="stopLoss"
-                                  step="100"
-                                   >
-                        </div>
-
-                        <div class="position-size">
-                            <label for="">Take Profit</label>
-                            <input type="number"
-                                   id="takeProfit"
-                                   step="100"
-                                   >
-                        </div>
-                        <button class="buy-btn">BUY</button>
-                        <button class="sell-btn">SELL</button>
-                        <button class="close-btn">CLOSE</button>
+                    <input
+                        type="number"
+                        id="takeProfit"
+                        step="100">
                 </div>
 
+                <button class="buy-btn">BUY</button>
+                <button class="sell-btn">SELL</button>
+                <button class="close-btn">CLOSE</button>
 
-            </aside>
-        </section>
+                <!-- Next Candle -->
+                <button id="nextCandleBtn">
+                    ▶ Next Candle
+                </button>
 
+                <small class="shortcut-hint">
+                    Shortcut: →
+                </small>
 
-        <section class="replay-controls">
-            <button id="nextCandleBtn">NEXT BUTTON</button>
-           
-        </section> 
+            </div>
+
+        </aside>
+
+            <!-- Current Position -->
+            <div class="card">
+                <h3>Current Position</h3>
+
+                <div class="info-row">
+                    <span>Status</span>
+                    <strong id="positionStatus">None</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Entry Price</span>
+                    <strong id="entryPrice">--</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Current Price</span>
+                    <strong id="currentPrice">--</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>Size</span>
+                    <strong id="positionSizeValue">--</strong>
+                </div>
+
+                <div class="info-row">
+                    <span>P/L</span>
+                    <strong id="profitLoss">0</strong>
+                </div>
+            </div>
+
+            <!-- Account Balance -->
+            <div class="summary-card">
+                <span>Account Balance</span>
+                <h2 id="accountBalance">$1,00,000</h2>
+            </div>
+
+            <!-- Position Size -->
+            <div class="position-size">
+                <label for="positionSize">
+                    Position Size
+                </label>
+
+                <input
+                    type="number"
+                    id="positionSize"
+                    value="1"
+                    min="1"
+                    required>
+            </div>
+
+            <!-- Trade Panel -->
+            <div class="trade-panel">
+
+                <div class="position-size">
+                    <label>Stop Loss</label>
+
+                    <input
+                        type="number"
+                        id="stopLoss"
+                        step="100">
+  
+
 
 
         <!-- ANALYTICS -->
