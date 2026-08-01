@@ -110,20 +110,20 @@ function updateSummaryCard(){
 
     // SESSION SUMMARY
 
-document.getElementById("totalTrades").textContent = session.totalTrades;
+// document.getElementById("totalTrades").textContent = session.totalTrades;
 
 
-document.getElementById("winningTrades").textContent = session.winningTrades;
+// document.getElementById("winningTrades").textContent = session.winningTrades;
 
 
-document.getElementById("losingTrades").textContent = session.losingTrades;
+// document.getElementById("losingTrades").textContent = session.losingTrades;
 
 
-document.getElementById("winRate").textContent =
-    session.winRate.toFixed(1) + "%";
+// document.getElementById("winRate").textContent =
+//     session.winRate.toFixed(1) + "%";
 
-document.getElementById("netProfit").textContent =
-    session.netProfit.toFixed(2);
+// document.getElementById("netProfit").textContent =
+//     session.netProfit.toFixed(2);
 
 
     // AnaLytics Panel
