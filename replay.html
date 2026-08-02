@@ -46,10 +46,24 @@
             </div>
 
             <div class="market-info">
+
+
+
                 <div class="market-item">
+
                     <span class="label">Market</span>
-                    <strong>BTC/USD</strong>
+
+                    <select id="marketSelect">
+
+                        <option value="btc">BTC/USD</option>
+                        <option value="eth">ETH/USD</option>
+
+                    </select>
+
                 </div>
+
+
+                
                 <div class="market-item">
                     <span class="label">Timeframe</span>
                     <strong>1D</strong>
@@ -74,7 +88,7 @@
 
 
 
-        <aside class="sidebar">
+         <aside class="sidebar">
 
             <!-- Current Position -->
             <div class="card">
@@ -140,7 +154,8 @@
 
             </div>
 
-        </aside>
+          </aside>
+        </section>
 
            
 
@@ -337,10 +352,17 @@
     <script src="js/replay/camera.js"></script>
     <script src="js/replay/chart.js"></script>
     <script src="js/replay/config.js"></script>
+
+
+
+    <script src="js/replay/markets.js"></script>
     <script src="js/replay/dataLoader.js"></script>
+
+    <!-- <script src="js/replay/dataLoader.js"></script> -->
+     <!-- <script src="js/replay/markets.js"></script> -->
     <script src="js/replay/replayEngine.js"></script>
-     <script src="js/replay/equity.js"></script>
-     <script src="js/replay/account.js"></script>
+    <script src="js/replay/equity.js"></script>
+    <script src="js/replay/account.js"></script>
     <script src="js/replay/summary.js"></script>
     <script src="js/replay/markers.js"></script>
     

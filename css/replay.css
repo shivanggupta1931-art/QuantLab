@@ -414,3 +414,30 @@
 .trade-settings input{
     width:100%;
 }
+
+#marketSelect{
+
+    width:100%;
+    margin-top:6px;
+
+    background:#111827;
+    color:white;
+
+    border:1px solid #374151;
+    border-radius:8px;
+
+    padding:8px 12px;
+
+    font-size:15px;
+
+    outline:none;
+
+    cursor:pointer;
+
+}
+
+#marketSelect:focus{
+
+    border-color:#3b82f6;
+
+}
