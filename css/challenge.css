@@ -75,6 +75,10 @@ body{
     display:flex;
     flex-direction:column;
     gap:16px;
+
+
+
+
 }
 
 .option-btn{
@@ -83,7 +87,7 @@ body{
     border-radius:14px;
 }
 
-.option-btn:hover{
+/* .option-btn:hover{
     transform:translateX(8px);
     border-color:var(--primary-color);
     background:rgba(37,99,235,.12);
@@ -94,8 +98,107 @@ body{
     background:rgba(37,99,235,.18);
     border:1px solid var(--primary-color);
     box-shadow:0 0 18px rgba(37,99,235,.25);
+} */
+/* 
+.option-btn:hover {
+    border-color: #3b82f6;
+    box-shadow: 0 0 12px rgba(59,130,246,.35);
+    transform: translateY(-2px);
 }
 
+.option-btn.selected {
+    background: rgba(59,130,246,.15);
+    border-color: #3b82f6;
+    color: #fff;
+} */
+
+
+
+
+
+/* 
+
+.option-btn:hover,
+.option-btn.selected {
+    background: linear-gradient(
+        135deg,
+        rgba(37,99,235,.35),
+        rgba(59,130,246,.25)
+    );
+
+    border: 2px solid #60a5fa;
+    color: #fff;
+
+    box-shadow:
+        inset 0 0 20px rgba(59,130,246,.25),
+        0 0 12px rgba(59,130,246,.8),
+        0 0 30px rgba(59,130,246,.6),
+        0 0 60px rgba(59,130,246,.35);
+} */
+
+
+
+ /* .option-btn:hover {
+    border: 2px solid #3b82f6;
+    color: #fff;
+
+    box-shadow:
+        0 0 5px #3b82f6,
+        0 0 15px #3b82f6,
+        0 0 30px #3b82f6,
+        0 0 60px rgba(59,130,246,.7);
+} */
+
+
+/* .option-btn { */
+    /* transition: all 0.25s ease;
+}
+
+.option-btn:hover {
+    border-color: #60a5fa;
+    color: #fff;
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 10px rgba(59,130,246,0.8),
+        0 0 25px rgba(59,130,246,0.6),
+        0 0 45px rgba(59,130,246,0.35);
+}
+
+.option-btn.selected {
+    background: rgba(59,130,246,.18);
+    border-color: #60a5fa;
+    color: #fff;
+
+    box-shadow:
+        0 0 12px rgba(59,130,246,0.9),
+        0 0 30px rgba(59,130,246,0.7),
+        0 0 60px rgba(59,130,246,0.45);
+} */
+
+
+
+.option-btn:hover,
+.option-btn.selected {
+   box-shadow:
+    0 0 6px rgba(255,255,255,0.35),
+    0 0 18px rgba(96,165,250,1),
+    0 0 40px rgba(59,130,246,.9),
+    0 0 90px rgba(37,99,235,.7);
+} 
+
+/* Mobile */
+@media (max-width: 768px) {
+    .option-btn:hover,
+    .option-btn.selected {
+        box-shadow:
+            0 0 18px rgba(59,130,246,.95),
+            0 0 40px rgba(59,130,246,.8),
+            0 0 80px rgba(59,130,246,.5);
+
+        transform: scale(1.02);
+    }
+}
 /* HINT */
 
 .hint-card{

@@ -16,6 +16,7 @@ const trade = {
 };
 
 function resetTrade() {
+
     trade.inPosition = false;
     trade.side = null;
     trade.entryPrice = 0;
@@ -27,8 +28,10 @@ function resetTrade() {
     trade.stopLoss = null;
     trade.takeProfit = null;
     trade.closeReason = null;
-}
 
+    updatePositionCard();
+
+}
 
 
 function setupTrade() {

@@ -70,7 +70,11 @@ function updateSession(tradePnL){
         session.largestLoss=Math.min(session.largestLoss,tradePnL);
     }
 
-    session.profitFactor=session.grossProfit/session.grossLoss;
+   if (session.grossLoss === 0) {
+    session.profitFactor = 0;
+} else {
+    session.profitFactor = session.grossProfit / session.grossLoss;
+}
 
 
     
@@ -82,13 +86,23 @@ function updateSession(tradePnL){
 
     // console.log("After:", JSON.stringify(session));
 
+if (session.totalTrades === 0) {
 
-    const winProbability = session.winRate / 100;
+    session.expectancy = 0;
+
+} else {
+
+    const winProbability = session.winningTrades / session.totalTrades;
     const lossProbability = session.losingTrades / session.totalTrades;
 
     session.expectancy =
         (winProbability * session.averageWin) -
         (lossProbability * session.averageLoss);
+
+}
+
+
+
 
         // Update Equity Peak
 session.equityPeak = Math.max(session.equityPeak, session.netProfit);
@@ -203,3 +217,36 @@ document.getElementById("accountBalance").textContent=
 
 }
 
+
+
+
+
+function resetSession() {
+
+    session.totalTrades = 0;
+    session.winningTrades = 0;
+    session.losingTrades = 0;
+
+    session.netProfit = 0;
+    session.grossProfit = 0;
+    session.grossLoss = 0;
+
+    session.winningAmount = 0;
+    session.losingAmount = 0;
+
+    session.averageWin = 0;
+    session.averageLoss = 0;
+
+    session.largestWin = Number.NEGATIVE_INFINITY;
+    session.largestLoss = Number.POSITIVE_INFINITY;
+
+    session.winRate = 0;
+    session.profitFactor = 0;
+    session.expectancy = 0;
+
+    session.equityPeak = 0;
+    session.largestDrawdown = 0;
+
+    updateSummaryCard();
+
+}
