@@ -258,3 +258,63 @@
     }
 
 }
+
+
+
+
+
+
+
+
+
+/* .playback-panel{
+
+    margin-top:20px;
+
+    padding:18px;
+
+    border-radius:14px;
+
+    background:#111827;
+
+    border:1px solid #1f2937;
+
+}
+
+.playback-panel h3{
+
+    margin-bottom:16px;
+
+    font-size:18px;
+
+}
+
+.play-btn{
+
+    width:100%;
+
+    margin-bottom:14px;
+
+}
+
+.speed-controls{
+
+    display:grid;
+
+    grid-template-columns:repeat(4,1fr);
+
+    gap:8px;
+
+    margin-bottom:14px;
+
+}
+
+.speed-btn{
+
+    padding:10px;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+} */

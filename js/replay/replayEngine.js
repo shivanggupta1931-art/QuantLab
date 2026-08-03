@@ -1,3 +1,40 @@
+let replayTimer=null;
+let isPlaying=false;
+let playbackSpeed=1000;
+
+
+function playReplay(){
+    if(isPlaying){
+        return;
+    }
+    isPlaying=true;
+    replayTimer=setInterval(()=>{
+        if(replay.currentIndex>=replay.allData.length){
+            pauseReplay();
+            return;
+        }
+        nextCandle();
+    },playbackSpeed)
+}
+
+
+
+function pauseReplay(){
+    clearInterval(replayTimer);
+    replayTimer=null;
+    isPlaying=false;
+}
+
+function toggleReplay(){
+    if(isPlaying){
+        pauseReplay();
+    }
+    else{
+        playReplay();
+    }
+
+}
+
 const replay = {
     allData: [],
     visibleData: [],
@@ -74,7 +111,5 @@ function nextCandle() {
     updateReplayPriceLine();
 
     moveCamera();
-
-    
-
+    saveCurrentState();
 }

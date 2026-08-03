@@ -1,104 +1,62 @@
+let currentMarket=null;
+
+const marketStates={};
 
 
-// document.addEventListener("DOMContentLoaded", async () => {
-//     initChart();
 
-//     // const data = await loadMarketData("data/btc/HitBTC_BTCUSD_d.csv");
-//     // let currentMarket = markets.btc;
+function saveCurrentState() {
+    if (!currentMarket) return;
 
-//     // replay.allData = await loadMarketData(currentMarket.file);
-//     // startReplay(data);
+    marketStates[currentMarket] = {
 
-// //     let currentMarket = markets.btc;
+        replay: structuredClone(replay),
 
-// // const data = await loadMarketData(currentMarket.file);
+        trade: structuredClone(trade),
+        session: structuredClone(session),
+        account: structuredClone(account),
 
-// // replay.allData = data;
+        tradeHistory: structuredClone(tradeHistory),
+        equityData: structuredClone(equityData)
 
-// // startReplay(data);
+    };
 
-
-// await loadSelectedMarket("btc");
-
-// const marketSelect = document.getElementById("marketSelect");
-
-// marketSelect.addEventListener("change", async function () {
-
-//     await loadSelectedMarket(this.value);
-
-// });
+}
 
 
 
 
+function restoreState(state) {
+
+    Object.assign(trade, state.trade);
+    Object.assign(session, state.session);
+    Object.assign(account, state.account);
+
+    Object.assign(replay, state.replay);
+
+    tradeHistory.length = 0;
+    tradeHistory.push(...state.tradeHistory);
+
+    equityData.length = 0;
+    equityData.push(...state.equityData);
 
 
-//     document.getElementById("nextCandleBtn").addEventListener("click", nextCandle);
-//     document.querySelector(".buy-btn").addEventListener("click", buy);
-//     document.querySelector(".sell-btn").addEventListener("click", sell);
-//     document.querySelector(".close-btn").addEventListener("click", closeTrade);
+    // Restore chart
+    candleSeries.setData(replay.visibleData);
 
-//     // Keyboard shortcut
-//     document.addEventListener("keydown", function (event) {
-//         if (event.repeat) return;
+    updateReplayPriceLine();
+    moveCamera();
 
-//         const tag = event.target.tagName;
+    renderTradeHistory();
+    updateSummaryCard();
+    function updateAccountUI() {
+    document.getElementById("accountBalance").textContent =
+        "$" + account.balance.toFixed(2);
+}
+   if (typeof updateEquityChart === "function") {
+    updateEquityChart();
+}
 
-//         if (tag === "INPUT" || tag === "TEXTAREA" || tag === "SELECT") {
-//             return;
-//         }
-
-//         if (event.key === "ArrowRight") {
-//             nextCandle();
-//         }
-//     });
-// });
-
-
-// // async function loadSelectedMarket(marketKey){
-
-// //     const market = markets[marketKey];
-
-// //     replay.allData = await loadMarketData(market.file);
-
-// //     startReplay(replay.allData);
-
-// // }
-
-
-// async function loadSelectedMarket(marketKey) {
-
-//     const market = markets[marketKey];
-
-//     resetSession();
-//     resetAccount();
-//     clearTradeHistory();
-//     resetEquity();
-//     resetTrade();
-
-//     replay.allData = await loadMarketData(market.file);
-
-//     startReplay(replay.allData);
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+}
 
 document.addEventListener("DOMContentLoaded", async () => {
 
@@ -147,6 +105,18 @@ document.addEventListener("DOMContentLoaded", async () => {
 
 async function loadSelectedMarket(marketKey) {
 
+    // Save previous market
+    saveCurrentState();
+
+    currentMarket = marketKey;
+
+    // Already played before?
+    if (marketStates[marketKey]) {
+
+        restoreState(marketStates[marketKey]);
+        return;
+    }
+
     const market = markets[marketKey];
 
     if (!market) {
@@ -154,8 +124,8 @@ async function loadSelectedMarket(marketKey) {
         return;
     }
 
-resetAccount();
-resetSession();
+    resetAccount();
+    resetSession();
     clearTradeHistory();
     resetEquity();
     resetTrade();
@@ -164,4 +134,6 @@ resetSession();
 
     startReplay(replay.allData);
 
+    // Save initial state
+   saveCurrentState();
 }

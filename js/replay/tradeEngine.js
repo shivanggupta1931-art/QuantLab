@@ -76,6 +76,7 @@ console.log("Visible Candle:", replay.visibleData[replay.visibleData.length - 1]
 
 
     updatePositionCard();
+    saveCurrentState();
 }
 
 function sell() {
@@ -94,6 +95,7 @@ function sell() {
     trade.entryTime = last.time;
 
     updatePositionCard();
+    saveCurrentState();
 }
 
 function updateTrade() {
@@ -179,6 +181,7 @@ function closeTrade() {
     resetTrade();
 
     updatePositionCard();
+    saveCurrentState();
 }
 console.log("tradeEngine loaded completely");
 
